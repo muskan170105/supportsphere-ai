@@ -1,0 +1,8 @@
+SupportSphere Payment Failure Guide
+
+If a customer's payment fails:
+
+1. Verify sufficient account balance.
+2. Check whether the card has expired.
+3. Retry the payment after 10 minutes.
+4. If the issue continues, contact SupportSphere Billing Team.
