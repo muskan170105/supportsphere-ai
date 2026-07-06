@@ -1,33 +1,82 @@
 from pydantic import BaseModel, Field
 
 
+# ==========================================================
+# Timeline
+# ==========================================================
+
+class TimelineStep(BaseModel):
+    """
+    One AI execution step.
+    """
+
+    agent: str
+
+    status: str
+
+    description: str
+
+
+# ==========================================================
+# Chat History
+# ==========================================================
+
+class ChatMessage(BaseModel):
+    """
+    One chat message.
+    """
+
+    sender: str
+
+    message: str
+
+
+class ChatHistoryResponse(BaseModel):
+    """
+    Chat history.
+    """
+
+    messages: list[ChatMessage]
+
+
+# ==========================================================
+# Start Chat
+# ==========================================================
+
 class StartChatResponse(BaseModel):
     """
-    Response returned when a new chat session starts.
+    Returned when a new chat session starts.
     """
 
     session_id: str = Field(
         ...,
-        description="Unique session identifier",
+        description="Unique session id",
     )
 
 
+# ==========================================================
+# Chat Request
+# ==========================================================
+
 class ChatRequest(BaseModel):
     """
-    Incoming chat request.
+    Incoming customer request.
     """
 
     session_id: str = Field(
         ...,
-        description="Unique session identifier",
+        description="Conversation session",
     )
 
     message: str = Field(
         ...,
         description="Customer message",
-        examples=["Track order 12345"],
     )
 
+
+# ==========================================================
+# Chat Response
+# ==========================================================
 
 class ChatResponse(BaseModel):
     """
@@ -35,3 +84,5 @@ class ChatResponse(BaseModel):
     """
 
     response: str
+
+    timeline: list[TimelineStep]

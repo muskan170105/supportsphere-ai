@@ -3,6 +3,8 @@ from langchain_core.messages import HumanMessage, SystemMessage
 from prompts.planner_prompt import PLANNER_PROMPT
 from schemas.planner_schema import PlannerOutput
 
+from core.execution_logger import execution_logger
+
 
 def planner_agent(
     planner_llm,
@@ -24,11 +26,9 @@ def planner_agent(
         SystemMessage(content=PLANNER_PROMPT)
     ]
 
-    # Add previous conversation
     if chat_history:
         messages.extend(chat_history)
 
-    # Add current user query
     messages.append(
         HumanMessage(content=user_query)
     )
@@ -38,5 +38,11 @@ def planner_agent(
     )
 
     planner_result = structured_llm.invoke(messages)
+
+    # Log Planner Execution
+    execution_logger.log(
+        "Planner Agent",
+        f"Intent: {planner_result.intent}"
+    )
 
     return planner_result

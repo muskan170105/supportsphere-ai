@@ -1,19 +1,29 @@
-# Virtual Environment
+# Python
 venv/
+__pycache__/
+*.pyc
 
-# Environment Variables
+# Environment
 .env
 
-# Python Cache
-__pycache__/
-*.py[cod]
+# Logs
+*.log
+logs/
 
-# Chroma Vector Database
-chroma_db/
+# Node
+node_modules/
 
-# VS Code
+# React
+dist/
+build/
+
+# IDE
 .vscode/
+.idea/
 
-# OS Files
+# OS
 .DS_Store
 Thumbs.db
+
+# Archives
+*.zip

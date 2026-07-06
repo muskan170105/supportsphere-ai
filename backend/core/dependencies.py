@@ -1,5 +1,3 @@
-import os
-
 from langchain_google_genai import (
     ChatGoogleGenerativeAI,
     GoogleGenerativeAIEmbeddings,
@@ -17,15 +15,19 @@ from core.orchestrator import ConversationOrchestrator
 from core.config import settings
 
 
+# ==========================================================
+# Environment Validation
+# ==========================================================
+
 if not settings.GOOGLE_API_KEY:
     raise ValueError(
         "GOOGLE_API_KEY not found."
     )
 
 
-# ---------------------------------
+# ==========================================================
 # Models
-# ---------------------------------
+# ==========================================================
 
 llm = ChatGoogleGenerativeAI(
     model=settings.CHAT_MODEL,
@@ -39,9 +41,9 @@ embedding_model = GoogleGenerativeAIEmbeddings(
 )
 
 
-# ---------------------------------
+# ==========================================================
 # Repositories
-# ---------------------------------
+# ==========================================================
 
 order_repository = OrderRepository()
 
@@ -50,9 +52,9 @@ payment_repository = PaymentRepository()
 user_repository = UserRepository()
 
 
-# ---------------------------------
+# ==========================================================
 # Tool Agent
-# ---------------------------------
+# ==========================================================
 
 tool_agent = ToolAgent(
     order_repository=order_repository,
@@ -61,12 +63,16 @@ tool_agent = ToolAgent(
 )
 
 
-# ---------------------------------
+# ==========================================================
 # Session Manager
-# ---------------------------------
+# ==========================================================
 
 session_manager = SessionManager()
 
+
+# ==========================================================
+# Factory
+# ==========================================================
 
 def get_orchestrator(session_id: str):
 
@@ -78,6 +84,5 @@ def get_orchestrator(session_id: str):
         llm=llm,
         embedding_model=embedding_model,
         tool_agent=tool_agent,
-        history_agent=session.history,
-        conversation_state=session.conversation_state,
+        session=session,
     )

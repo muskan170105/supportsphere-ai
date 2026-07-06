@@ -1,5 +1,7 @@
 from prompts.response_prompt import RESPONSE_PROMPT
 
+from core.execution_logger import execution_logger
+
 
 def response_agent(
     llm,
@@ -31,5 +33,10 @@ def response_agent(
     )
 
     response = llm.invoke(prompt)
+
+    execution_logger.log(
+        "Response Agent",
+        "Generated final response"
+    )
 
     return response.content

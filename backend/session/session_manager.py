@@ -1,29 +1,26 @@
 import uuid
 
-from agents.history import HistoryAgent
-from state.conversation_state import ConversationState
+from session.session import Session
 
 from exceptions.session_exceptions import (
     InvalidSessionException,
 )
 
 
-class Session:
-    """
-    Represents one customer session.
-    """
-
-    def __init__(self):
-        self.history = HistoryAgent()
-        self.conversation_state = ConversationState()
-
-
 class SessionManager:
+    """
+    Manages all active customer sessions.
+    """
 
     def __init__(self):
+
         self.sessions = {}
 
-    def create_session(self):
+    # ---------------------------------------------------------
+    # Session Lifecycle
+    # ---------------------------------------------------------
+
+    def create_session(self) -> str:
 
         session_id = str(uuid.uuid4())
 
@@ -31,17 +28,47 @@ class SessionManager:
 
         return session_id
 
-    def get_session(self, session_id: str):
+    def get_session(self, session_id: str) -> Session:
 
         session = self.sessions.get(session_id)
 
         if session is None:
-            raise InvalidSessionException(
-                session_id
-            )
+            raise InvalidSessionException(session_id)
 
         return session
 
     def clear_session(self, session_id: str):
 
         self.sessions.pop(session_id, None)
+
+    # ---------------------------------------------------------
+    # Timeline Helpers
+    # ---------------------------------------------------------
+
+    def get_timeline(self, session_id: str):
+
+        session = self.get_session(session_id)
+
+        return session.get_timeline()
+
+    def clear_timeline(self, session_id: str):
+
+        session = self.get_session(session_id)
+
+        session.clear_timeline()
+
+    def add_timeline_step(
+        self,
+        session_id: str,
+        agent: str,
+        status: str,
+        description: str,
+    ):
+
+        session = self.get_session(session_id)
+
+        session.add_timeline_step(
+            agent=agent,
+            status=status,
+            description=description,
+        )

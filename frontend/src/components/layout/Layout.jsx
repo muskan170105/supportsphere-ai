@@ -3,20 +3,32 @@ import Topbar from "../topbar/Topbar";
 
 function Layout({ children }) {
   return (
-    <div className="flex min-h-screen bg-slate-950">
+    <div className="flex min-h-screen bg-slate-100">
+
       {/* Sidebar */}
+
       <Sidebar />
 
-      {/* Main Content */}
-      <div className="flex flex-1 flex-col">
-        {/* Topbar */}
+      {/* Main */}
+
+      <div className="flex flex-1 flex-col min-w-0">
+
         <Topbar />
 
-        {/* Current Page */}
-        <main className="flex-1 p-6 overflow-auto">
-          {children}
+        {/* Workspace */}
+
+        <main className="flex-1 overflow-auto bg-slate-100">
+
+          <div className="p-8 max-w-[1700px] mx-auto">
+
+            {children}
+
+          </div>
+
         </main>
+
       </div>
+
     </div>
   );
 }

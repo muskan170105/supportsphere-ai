@@ -12,3 +12,163 @@
 2026-07-06 10:46:56 | INFO | Tool : ORDER_TRACKING
 2026-07-06 10:46:56 | INFO | Executing Tool : ORDER_TRACKING
 2026-07-06 10:46:59 | INFO | Response generated.
+2026-07-06 14:56:32 | INFO | ================================================================================
+2026-07-06 14:56:32 | INFO | User Query : track my ORD123
+2026-07-06 14:56:33 | INFO | Intent : ORDER_TRACKING
+2026-07-06 14:56:33 | INFO | Need RAG : False
+2026-07-06 14:56:33 | INFO | Tool : ORDER_TRACKING
+2026-07-06 14:56:33 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-06 14:56:35 | INFO | Response generated.
+2026-07-06 14:56:35 | INFO | ================================================================================
+2026-07-06 14:57:48 | INFO | ================================================================================
+2026-07-06 14:57:48 | INFO | User Query : track my order #12345
+2026-07-06 14:57:50 | INFO | Intent : ORDER_TRACKING
+2026-07-06 14:57:50 | INFO | Need RAG : False
+2026-07-06 14:57:50 | INFO | Tool : ORDER_TRACKING
+2026-07-06 14:57:50 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-06 14:57:53 | INFO | Response generated.
+2026-07-06 14:57:53 | INFO | ================================================================================
+2026-07-06 15:34:38 | INFO | ================================================================================
+2026-07-06 15:34:38 | INFO | User Query : where is my order
+2026-07-06 15:34:40 | INFO | Intent : ORDER_TRACKING
+2026-07-06 15:34:41 | INFO | Need RAG : False
+2026-07-06 15:34:41 | INFO | Tool : ORDER_TRACKING
+2026-07-06 15:34:55 | INFO | ================================================================================
+2026-07-06 15:34:55 | INFO | User Query : #99999
+2026-07-06 15:34:55 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-06 15:34:58 | INFO | Response generated.
+2026-07-06 15:34:58 | INFO | ================================================================================
+2026-07-06 15:49:33 | INFO | ================================================================================
+2026-07-06 15:49:33 | INFO | User Query : where is my order #12345
+2026-07-06 15:49:35 | INFO | Intent : ORDER_TRACKING
+2026-07-06 15:49:35 | INFO | Need RAG : False
+2026-07-06 15:49:35 | INFO | Tool : ORDER_TRACKING
+2026-07-06 15:49:35 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-06 15:49:37 | INFO | Response generated.
+2026-07-06 15:49:37 | INFO | ================================================================================
+2026-07-06 16:07:08 | INFO | ================================================================================
+2026-07-06 16:07:08 | INFO | User Query : where is my order #12345?
+2026-07-06 16:07:11 | INFO | Intent : ORDER_TRACKING
+2026-07-06 16:07:11 | INFO | Need RAG : False
+2026-07-06 16:07:11 | INFO | Tool : ORDER_TRACKING
+2026-07-06 16:07:11 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-06 16:07:13 | INFO | Response generated.
+2026-07-06 16:07:13 | INFO | ================================================================================
+2026-07-06 17:10:38 | INFO | ================================================================================
+2026-07-06 17:10:38 | INFO | User Query : Track order 12345
+2026-07-06 17:10:41 | INFO | Intent : ORDER_TRACKING
+2026-07-06 17:10:41 | INFO | Need RAG : False
+2026-07-06 17:10:41 | INFO | Tool : ORDER_TRACKING
+2026-07-06 17:10:41 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-06 17:10:46 | INFO | Response generated.
+2026-07-06 17:10:46 | INFO | ================================================================================
+2026-07-06 17:32:33 | INFO | ================================================================================
+2026-07-06 17:32:33 | INFO | User Query : where is my order #12345
+2026-07-06 17:32:35 | INFO | Intent : ORDER_TRACKING
+2026-07-06 17:32:35 | INFO | Need RAG : False
+2026-07-06 17:32:35 | INFO | Tool : ORDER_TRACKING
+2026-07-06 17:32:35 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-06 17:32:37 | INFO | Response generated.
+2026-07-06 17:32:37 | INFO | ================================================================================
+2026-07-06 17:33:06 | INFO | ================================================================================
+2026-07-06 17:33:06 | INFO | User Query : can you tell me what are you refund policies and if i am elgible for the refund or not
+2026-07-06 17:33:09 | INFO | Intent : GENERAL_INFORMATION
+2026-07-06 17:33:09 | INFO | Need RAG : True
+2026-07-06 17:33:09 | INFO | Tool : None
+2026-07-06 17:33:09 | INFO | Running Retriever Agent
+2026-07-06 17:33:14 | INFO | Response generated.
+2026-07-06 17:33:14 | INFO | ================================================================================
+2026-07-06 17:33:45 | INFO | ================================================================================
+2026-07-06 17:33:45 | INFO | User Query : #12345
+2026-07-06 17:33:48 | INFO | Intent : REFUND_REQUEST
+2026-07-06 17:33:48 | INFO | Need RAG : False
+2026-07-06 17:33:48 | INFO | Tool : REFUND_REQUEST
+2026-07-06 17:33:48 | INFO | Executing Tool : REFUND_REQUEST
+2026-07-06 17:33:50 | INFO | Response generated.
+2026-07-06 17:33:50 | INFO | ================================================================================
+2026-07-06 17:39:38 | INFO | ================================================================================
+2026-07-06 17:39:38 | INFO | User Query : can u tell me about your refund policies
+2026-07-06 17:39:40 | INFO | Intent : GENERAL_INFORMATION
+2026-07-06 17:39:40 | INFO | Need RAG : True
+2026-07-06 17:39:40 | INFO | Tool : None
+2026-07-06 17:39:40 | INFO | Running Retriever Agent
+2026-07-06 17:39:45 | INFO | Response generated.
+2026-07-06 17:39:45 | INFO | ================================================================================
+2026-07-06 17:54:30 | INFO | ================================================================================
+2026-07-06 17:54:30 | INFO | User Query : track order #99999
+2026-07-06 17:55:14 | INFO | ================================================================================
+2026-07-06 17:55:14 | INFO | User Query : track order #12345
+2026-07-06 22:35:16 | INFO | ================================================================================
+2026-07-06 22:35:16 | INFO | User Query : string
+2026-07-06 22:35:16 | INFO | Running Planner Agent...
+2026-07-06 22:35:19 | INFO | Intent : GENERAL_INFORMATION
+2026-07-06 22:35:19 | INFO | Need RAG : False
+2026-07-06 22:35:19 | INFO | Tool : None
+2026-07-06 22:35:19 | INFO | Running Response Agent...
+2026-07-06 22:35:26 | INFO | Response generated.
+2026-07-06 22:35:26 | INFO | ================================================================================
+2026-07-06 22:36:01 | INFO | ================================================================================
+2026-07-06 22:36:01 | INFO | User Query : Track my order #12345
+2026-07-06 22:36:01 | INFO | Running Planner Agent...
+2026-07-06 22:36:38 | ERROR | Pipeline execution failed.
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_google_genai\chat_models.py", line 3302, in _generate
+    response: GenerateContentResponse = self.client.models.generate_content(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\models.py", line 6526, in generate_content
+    response = self._generate_content(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\models.py", line 4954, in _generate_content
+    response = self._api_client.request(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\_api_client.py", line 1618, in request
+    response = self._request(http_request, http_options, stream=False)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\_api_client.py", line 1409, in _request
+    return retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+  File "C:\Users\muska\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 438, in result
+    return self.__get_result()
+  File "C:\Users\muska\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 390, in __get_result
+    raise self._exception
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\_api_client.py", line 1388, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\errors.py", line 155, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\errors.py", line 184, in raise_error
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 21.556791646s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '21s'}]}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestrator.py", line 99, in run
+    if not self.planner_stage.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestration\planner_stage.py", line 53, in execute
+    context.planner_result = planner_agent(
+  File "C:\AI_projects\supportsphere-ai\backend\agents\planner.py", line 40, in planner_agent
+    planner_result = structured_llm.invoke(messages)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_core\runnables\base.py", line 3442, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_core\runnables\base.py", line 6004, in invoke
+    return self.bound.invoke(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_google_genai\chat_models.py", line 2754, in invoke
+    return super().invoke(input, config, stop=stop, **kwargs)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_core\language_models\chat_models.py", line 476, in invoke
+    self.generate_prompt(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_core\language_models\chat_models.py", line 1849, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_core\language_models\chat_models.py", line 1656, in generate
+    self._generate_with_cache(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_core\language_models\chat_models.py", line 1994, in _generate_with_cache
+    result = self._generate(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_google_genai\chat_models.py", line 3306, in _generate
+    _handle_client_error(e, request)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_google_genai\chat_models.py", line 177, in _handle_client_error
+    raise ChatGoogleGenerativeAIError(msg) from e
+langchain_google_genai.chat_models.ChatGoogleGenerativeAIError: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 21.556791646s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '21s'}]}}

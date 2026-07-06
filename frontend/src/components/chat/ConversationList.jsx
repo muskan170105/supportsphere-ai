@@ -1,66 +1,104 @@
+import {
+  MessageCircle,
+  Circle,
+} from "lucide-react";
+
 import ConversationCard from "./ConversationCard";
 
-const conversations = [
-  {
-    id: 1,
-    name: "Rahul Sharma",
-    message: "My order #12345 hasn't arrived.",
-    status: "AI Handling",
-    time: "2m ago",
-  },
-  {
-    id: 2,
-    name: "Priya Verma",
-    message: "I want to return my product.",
-    status: "Open",
-    time: "5m ago",
-  },
-  {
-    id: 3,
-    name: "Amit Kumar",
-    message: "Payment failed but amount deducted.",
-    status: "Escalated",
-    time: "8m ago",
-  },
-];
-
 function ConversationList({
+  conversations,
   selectedConversation,
   setSelectedConversation,
 }) {
   return (
-    <div className="bg-slate-950 rounded-2xl p-5">
+    <div className="bg-white rounded-2xl border border-slate-200 shadow-sm h-full">
 
-      {/* Heading */}
-      <h2 className="text-xl font-bold text-white mb-5">
-        Live Conversations
-      </h2>
+      {/* Header */}
 
-      {/* Conversation Cards */}
-      <div className="space-y-4">
+      <div className="flex items-center justify-between px-6 py-5 border-b border-slate-200">
 
-        {conversations.map((conversation) => (
+        <div>
 
-          <div
-            key={conversation.id}
-            onClick={() =>
-              setSelectedConversation(conversation)
-            }
-            className={`cursor-pointer rounded-xl transition ${
-              selectedConversation?.id === conversation.id
-                ? "ring-2 ring-cyan-500"
-                : ""
-            }`}
-          >
-            <ConversationCard
-              name={conversation.name}
-              message={conversation.message}
-              status={conversation.status}
-              time={conversation.time}
+          <h2 className="text-xl font-bold text-slate-900">
+            Live Conversations
+          </h2>
+
+          <p className="text-sm text-slate-500 mt-1">
+            Active customer support sessions
+          </p>
+
+        </div>
+
+        <div className="flex items-center gap-2 bg-emerald-50 text-emerald-700 px-3 py-2 rounded-xl">
+
+          <Circle
+            size={10}
+            fill="currentColor"
+          />
+
+          <span className="text-sm font-semibold">
+            {conversations.length} Active
+          </span>
+
+        </div>
+
+      </div>
+
+      {/* Conversations */}
+
+      <div className="p-4 space-y-3 max-h-[720px] overflow-y-auto">
+
+        {conversations.length === 0 ? (
+
+          <div className="flex flex-col items-center justify-center py-20">
+
+            <MessageCircle
+              size={42}
+              className="text-slate-300"
             />
+
+            <p className="mt-4 text-slate-500">
+              No active conversations
+            </p>
+
           </div>
 
-        ))}
+        ) : (
+
+          conversations.map((conversation) => (
+
+            <div
+              key={conversation.id}
+              onClick={() =>
+                setSelectedConversation(conversation)
+              }
+              className={`
+                cursor-pointer
+                rounded-2xl
+                transition-all
+                duration-300
+
+                ${
+                  selectedConversation?.id ===
+                  conversation.id
+                    ? "ring-2 ring-cyan-500 shadow-md"
+                    : "hover:shadow-md hover:-translate-y-0.5"
+                }
+              `}
+            >
+
+              <ConversationCard
+                name={conversation.name}
+                message={conversation.last_message}
+                status={conversation.status}
+                time={conversation.time}
+              />
+
+            </div>
+
+          ))
+
+        )}
 
       </div>
 

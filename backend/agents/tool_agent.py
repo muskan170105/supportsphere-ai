@@ -7,6 +7,8 @@ from exceptions.tool_exceptions import (
     ToolNotFoundException,
 )
 
+from core.execution_logger import execution_logger
+
 
 class ToolAgent:
     """
@@ -56,4 +58,11 @@ class ToolAgent:
 
         parameters = planner_result.parameters or {}
 
-        return tool.execute(**parameters)
+        result = tool.execute(**parameters)
+
+        execution_logger.log(
+            "Tool Agent",
+            f"Executed {planner_result.tool}"
+        )
+
+        return result

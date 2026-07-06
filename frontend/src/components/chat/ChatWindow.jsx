@@ -1,9 +1,19 @@
+import { useState } from "react";
+
 import ChatHeader from "./ChatHeader";
 import MessageBubble from "./MessageBubble";
 import SuggestedActions from "./SuggestedActions";
 import ChatInput from "./ChatInput";
 
-function ChatWindow({ conversation }) {
+function ChatWindow({
+  conversation,
+  messages,
+  loading,
+  onSendMessage,
+}) {
+
+  const [input, setInput] = useState("");
+
   if (!conversation) {
     return (
       <div className="bg-slate-900 rounded-2xl border border-slate-800 h-full flex items-center justify-center">
@@ -14,47 +24,66 @@ function ChatWindow({ conversation }) {
     );
   }
 
-  const messages = [
-    {
-      sender: "Customer",
-      message: conversation.message,
-    },
-    {
-      sender: "AI",
-      message:
-        "I understand your concern. Let me check your order details and assist you.",
-    },
-  ];
+  function handleSend() {
 
-  const actions = [
-    "Track Order",
-    "Refund",
-    "Escalate",
-  ];
+    if (!input.trim()) return;
+
+    onSendMessage(input);
+
+    setInput("");
+
+  }
 
   return (
+
     <div className="bg-slate-900 rounded-2xl border border-slate-800 h-full flex flex-col">
 
       <ChatHeader conversation={conversation} />
 
+      {/* Messages */}
+
       <div className="flex-1 p-6 space-y-5 overflow-y-auto">
 
         {messages.map((msg, index) => (
+
           <MessageBubble
             key={index}
             sender={msg.sender}
             message={msg.message}
           />
+
         ))}
+
+        {loading && (
+
+          <div className="text-cyan-400">
+
+            AI is thinking...
+
+          </div>
+
+        )}
 
       </div>
 
-      <SuggestedActions actions={actions} />
+      <SuggestedActions
+        actions={[
+          "Track Order",
+          "Refund",
+          "Escalate",
+        ]}
+      />
 
-      <ChatInput />
+      <ChatInput
+        input={input}
+        setInput={setInput}
+        onSend={handleSend}
+      />
 
     </div>
+
   );
+
 }
 
 export default ChatWindow;
