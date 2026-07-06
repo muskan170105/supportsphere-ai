@@ -3,33 +3,43 @@ class CustomerRepository:
     def get_customer(self, customer_id):
 
         customers = {
+
             1: {
                 "id": 1,
-                "name": "John Doe",
-                "email": "john@example.com",
-                "phone": "+1 555 123 4567",
+                "name": "Rahul Sharma",
+                "email": "rahul@example.com",
+                "phone": "+91 9876543210",
                 "tier": "Premium",
-                "total_orders": 14,
+                "orders": 18,
+                "spent": 42580,
+                "member_since": "2023",
             },
+
             2: {
                 "id": 2,
-                "name": "Sarah Smith",
-                "email": "sarah@example.com",
-                "phone": "+1 555 654 9876",
+                "name": "Priya Verma",
+                "email": "priya@example.com",
+                "phone": "+91 9123456789",
                 "tier": "Gold",
-                "total_orders": 8,
+                "orders": 9,
+                "spent": 18320,
+                "member_since": "2024",
             },
+
             3: {
                 "id": 3,
                 "name": "Michael Lee",
                 "email": "michael@example.com",
-                "phone": "+1 555 888 7777",
+                "phone": "+91 9988776655",
                 "tier": "Silver",
-                "total_orders": 3,
+                "orders": 3,
+                "spent": 5400,
+                "member_since": "2025",
             },
+
         }
 
         return customers.get(customer_id)
-        
+
 
 customer_repository = CustomerRepository()

@@ -5,9 +5,15 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
-function DocumentRow({ document }) {
+function DocumentRow({
+  document,
+  onView,
+  onDelete,
+}) {
   return (
     <tr className="border-t border-slate-100 hover:bg-slate-50 transition">
+
+      {/* Document */}
 
       <td className="px-6 py-5">
 
@@ -22,21 +28,43 @@ function DocumentRow({ document }) {
 
           </div>
 
-          <span className="font-medium text-slate-800">
-            {document.name}
-          </span>
+          <div>
+
+            <p className="font-semibold text-slate-900">
+              {document.name}
+            </p>
+
+            <p className="text-xs text-slate-500">
+              AI Knowledge Document
+            </p>
+
+          </div>
 
         </div>
 
       </td>
 
-      <td className="px-6 py-5 text-slate-600">
-        {document.type}
+      {/* Type */}
+
+      <td className="px-6 py-5">
+
+        <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm font-medium">
+          {document.type}
+        </span>
+
       </td>
 
-      <td className="px-6 py-5 text-slate-600">
-        {document.chunks}
+      {/* Chunks */}
+
+      <td className="px-6 py-5">
+
+        <span className="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-sm font-semibold">
+          {document.chunks}
+        </span>
+
       </td>
+
+      {/* Status */}
 
       <td className="px-6 py-5">
 
@@ -50,30 +78,58 @@ function DocumentRow({ document }) {
 
       </td>
 
-      <td className="px-6 py-5 text-slate-600">
+      {/* Uploaded */}
+
+      <td className="px-6 py-5 text-slate-600 font-medium">
         {document.uploaded}
       </td>
 
+      {/* Actions */}
+
       <td className="px-6 py-5">
 
-        <div className="flex gap-2">
+        <div className="flex gap-3">
 
-          <button className="w-10 h-10 rounded-lg bg-slate-100 hover:bg-cyan-100 flex items-center justify-center transition">
-
-            <Eye
-              size={18}
-              className="text-slate-700"
-            />
-
+          <button
+            onClick={() => onView(document)}
+            className="
+              flex
+              items-center
+              gap-2
+              px-3
+              py-2
+              rounded-lg
+              bg-cyan-50
+              hover:bg-cyan-100
+              text-cyan-700
+              transition
+            "
+          >
+            <Eye size={16} />
+            <span className="text-sm font-medium">
+              View
+            </span>
           </button>
 
-          <button className="w-10 h-10 rounded-lg bg-slate-100 hover:bg-red-100 flex items-center justify-center transition">
-
-            <Trash2
-              size={18}
-              className="text-red-500"
-            />
-
+          <button
+            onClick={() => onDelete(document)}
+            className="
+              flex
+              items-center
+              gap-2
+              px-3
+              py-2
+              rounded-lg
+              bg-red-50
+              hover:bg-red-100
+              text-red-600
+              transition
+            "
+          >
+            <Trash2 size={16} />
+            <span className="text-sm font-medium">
+              Delete
+            </span>
           </button>
 
         </div>

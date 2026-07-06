@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+MOCK_MODE=True
 
 class Settings:
     """

@@ -5,21 +5,24 @@ class ConversationRepository:
         return [
             {
                 "id": 1,
-                "name": "John Doe",
+                "customer_id": 1,
+                "name": "Rahul Sharma",
                 "last_message": "Where is my order?",
                 "status": "Active",
                 "time": "2 min ago",
             },
             {
                 "id": 2,
-                "name": "Sarah Smith",
+                "customer_id": 2,
+                "name": "Priya Verma",
                 "last_message": "Refund status?",
                 "status": "Waiting",
                 "time": "10 min ago",
             },
             {
                 "id": 3,
-                "name": "Michael Lee",
+                "customer_id": 1,
+                "name": "Rahul Sharma",
                 "last_message": "Payment failed",
                 "status": "Resolved",
                 "time": "25 min ago",

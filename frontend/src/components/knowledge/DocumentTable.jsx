@@ -35,9 +35,14 @@ const documents = [
   },
 ];
 
-function DocumentTable() {
+function DocumentTable({
+  onView,
+  onDelete,
+}) {
   return (
     <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+
+      {/* Header */}
 
       <div className="px-6 py-5 border-b border-slate-200 flex items-center justify-between">
 
@@ -100,6 +105,8 @@ function DocumentTable() {
             <DocumentRow
               key={document.id}
               document={document}
+              onView={onView}
+              onDelete={onDelete}
             />
 
           ))}
