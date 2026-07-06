@@ -1,0 +1,14 @@
+2026-07-05 18:53:51 | INFO | ================================================================================
+2026-07-05 18:53:51 | INFO | User Query : Track order 12345
+2026-07-05 18:53:54 | INFO | Intent : ORDER_TRACKING
+2026-07-05 18:53:54 | INFO | Need RAG : False
+2026-07-05 18:53:54 | INFO | Tool : ORDER_TRACKING
+2026-07-05 18:53:54 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-05 18:53:55 | INFO | Response generated.
+2026-07-06 10:46:53 | INFO | ================================================================================
+2026-07-06 10:46:53 | INFO | User Query : Track order 12345
+2026-07-06 10:46:56 | INFO | Intent : ORDER_TRACKING
+2026-07-06 10:46:56 | INFO | Need RAG : False
+2026-07-06 10:46:56 | INFO | Tool : ORDER_TRACKING
+2026-07-06 10:46:56 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-06 10:46:59 | INFO | Response generated.

@@ -3,10 +3,14 @@ from tools.refund_tool import RefundTool
 from tools.payment_tool import PaymentTool
 from tools.password_tool import PasswordTool
 
+from exceptions.tool_exceptions import (
+    ToolNotFoundException,
+)
+
 
 class ToolAgent:
     """
-    Executes business tools selected by the Planner Agent.
+    Executes the business tool selected by the Planner Agent.
     """
 
     def __init__(
@@ -17,9 +21,14 @@ class ToolAgent:
     ):
 
         self.tools = {
-            "ORDER_TRACKING": TrackingTool(order_repository),
 
-            "REFUND_REQUEST": RefundTool(order_repository),
+            "ORDER_TRACKING": TrackingTool(
+                order_repository
+            ),
+
+            "REFUND_REQUEST": RefundTool(
+                order_repository
+            ),
 
             "PAYMENT_FAILURE": PaymentTool(
                 order_repository,
@@ -27,7 +36,7 @@ class ToolAgent:
             ),
 
             "PASSWORD_RESET": PasswordTool(
-                user_repository,
+                user_repository
             ),
         }
 
@@ -36,16 +45,15 @@ class ToolAgent:
         Execute the selected business tool.
         """
 
-        if planner_result.tool is None:
-            return None
-
-        tool = self.tools.get(planner_result.tool)
+        tool = self.tools.get(
+            planner_result.tool
+        )
 
         if tool is None:
-            raise ValueError(
-                f"Unknown tool: {planner_result.tool}"
+            raise ToolNotFoundException(
+                planner_result.tool
             )
 
-        return tool.execute(
-            **planner_result.parameters
-        )
+        parameters = planner_result.parameters or {}
+
+        return tool.execute(**parameters)

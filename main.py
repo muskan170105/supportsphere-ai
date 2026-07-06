@@ -63,7 +63,7 @@ tool_agent = ToolAgent(
     user_repository=user_repository,
 )
 
-history_agent = HistoryAgent()
+history = HistoryAgent()
 
 conversation_state = ConversationState()
 
@@ -75,7 +75,7 @@ orchestrator = ConversationOrchestrator(
     llm=llm,
     embedding_model=embedding_model,
     tool_agent=tool_agent,
-    history_agent=history_agent,
+    history=history,
     conversation_state=conversation_state,
 )
 
