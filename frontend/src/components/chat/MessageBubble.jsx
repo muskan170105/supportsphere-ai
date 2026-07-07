@@ -2,7 +2,13 @@ import {
   Bot,
   User,
   CheckCheck,
+  Copy,
+  Check,
+  ThumbsUp,
+  ThumbsDown,
 } from "lucide-react";
+
+import { useState } from "react";
 
 function MessageBubble({
   sender,
@@ -11,10 +17,33 @@ function MessageBubble({
 
   const isAI = sender === "AI";
 
-  const currentTime = new Date().toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
+  const [copied, setCopied] =
+    useState(false);
+
+  const [feedback, setFeedback] =
+    useState(null);
+
+  const currentTime =
+    new Date().toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+
+  async function copyMessage() {
+
+    await navigator.clipboard.writeText(
+      message
+    );
+
+    setCopied(true);
+
+    setTimeout(() => {
+
+      setCopied(false);
+
+    }, 2000);
+
+  }
 
   return (
 
@@ -23,7 +52,7 @@ function MessageBubble({
         isAI
           ? "justify-start"
           : "justify-end"
-      } mb-6`}
+      } mb-6 group`}
     >
 
       <div
@@ -57,17 +86,23 @@ function MessageBubble({
           {
 
             isAI
+
               ? (
+
                   <Bot
                     size={20}
                     className="text-cyan-700"
                   />
+
                 )
+
               : (
+
                   <User
                     size={18}
                     className="text-slate-700"
                   />
+
                 )
 
           }
@@ -85,15 +120,18 @@ function MessageBubble({
 
             ${
               isAI
+
                 ? "bg-white border border-slate-200 text-slate-800"
+
                 : "bg-cyan-600 text-white"
+
             }
           `}
         >
 
           {/* Header */}
 
-          <div className="flex items-center justify-between gap-6 mb-3">
+          <div className="flex justify-between items-center gap-6 mb-3">
 
             <div className="flex items-center gap-2">
 
@@ -106,9 +144,13 @@ function MessageBubble({
               >
 
                 {
+
                   isAI
+
                     ? "SupportSphere AI"
+
                     : "Customer"
+
                 }
 
               </span>
@@ -151,7 +193,7 @@ function MessageBubble({
 
           </div>
 
-          {/* Content */}
+          {/* Message */}
 
           <p className="leading-7 whitespace-pre-wrap">
 
@@ -161,26 +203,142 @@ function MessageBubble({
 
           {/* Footer */}
 
-          {
+          <div className="flex items-center justify-between mt-5">
 
-            !isAI && (
+            {
 
-              <div className="flex justify-end mt-4">
+              !isAI ? (
 
                 <CheckCheck
                   size={16}
                   className="text-cyan-100"
                 />
 
-              </div>
+              ) : (
 
-            )
+                <div className="flex items-center gap-2">
 
-          }
+                  <button
+
+                    onClick={() =>
+                      setFeedback("up")
+                    }
+
+                    className={`
+                      p-1.5
+                      rounded-lg
+                      transition
+
+                      ${
+                        feedback === "up"
+
+                          ? "bg-emerald-100 text-emerald-700"
+
+                          : "hover:bg-slate-100"
+
+                      }
+                    `}
+
+                  >
+
+                    <ThumbsUp size={15} />
+
+                  </button>
+
+                  <button
+
+                    onClick={() =>
+                      setFeedback("down")
+                    }
+
+                    className={`
+                      p-1.5
+                      rounded-lg
+                      transition
+
+                      ${
+                        feedback === "down"
+
+                          ? "bg-red-100 text-red-700"
+
+                          : "hover:bg-slate-100"
+
+                      }
+                    `}
+
+                  >
+
+                    <ThumbsDown size={15} />
+
+                  </button>
+
+                </div>
+
+              )
+
+            }
+
+            {
+
+              isAI && (
+
+                <button
+
+                  onClick={copyMessage}
+
+                  className="
+                    flex
+                    items-center
+                    gap-1
+                    text-xs
+                    text-slate-500
+                    hover:text-cyan-700
+                    transition
+                  "
+
+                >
+
+                  {
+
+                    copied
+
+                      ? (
+
+                          <>
+
+                            <Check size={15} />
+
+                            Copied
+
+                          </>
+
+                        )
+
+                      : (
+
+                          <>
+
+                            <Copy size={15} />
+
+                            Copy
+
+                          </>
+
+                        )
+
+                  }
+
+                </button>
+
+              )
+
+            }
+
+          </div>
 
         </div>
 
-      </div>
+      </div>s
 
     </div>
 

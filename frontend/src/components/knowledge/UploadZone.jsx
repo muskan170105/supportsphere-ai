@@ -5,11 +5,83 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
+import {
+  useRef,
+  useState,
+} from "react";
+
+import {
+  uploadDocument,
+} from "../../api/knowledgeApi";
+
+import {
+  useKnowledge,
+} from "../../context/KnowledgeContext";
+
+
 function UploadZone() {
+
+  const fileInputRef =
+    useRef(null);
+
+  const [uploading, setUploading] =
+    useState(false);
+
+  const [message, setMessage] =
+    useState("");
+
+  const {
+    refreshDocuments,
+  } = useKnowledge();
+
+
+  async function handleUpload(event) {
+
+    const file =
+      event.target.files[0];
+
+    if (!file)
+      return;
+
+    try {
+
+      setUploading(true);
+
+      setMessage("");
+
+      const response =
+        await uploadDocument(file);
+
+      await refreshDocuments();
+
+      setMessage(
+        `${response.filename} uploaded successfully`
+      );
+
+    }
+    catch (error) {
+
+      console.error(error);
+
+      setMessage(
+        "Upload failed."
+      );
+
+    }
+    finally {
+
+      setUploading(false);
+
+    }
+
+  }
+
+
   return (
+
     <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
 
-      {/* Top */}
+      {/* Header */}
 
       <div className="flex items-center justify-between px-8 py-6 border-b border-slate-200">
 
@@ -26,6 +98,11 @@ function UploadZone() {
         </div>
 
         <button
+
+          onClick={() =>
+            fileInputRef.current.click()
+          }
+
           className="
             bg-cyan-600
             hover:bg-cyan-700
@@ -36,9 +113,34 @@ function UploadZone() {
             font-medium
             transition
           "
+
         >
-          Select Files
+
+          {
+
+            uploading
+
+              ? "Uploading..."
+
+              : "Select Files"
+
+          }
+
         </button>
+
+        <input
+
+          ref={fileInputRef}
+
+          type="file"
+
+          accept=".pdf,.docx,.txt"
+
+          hidden
+
+          onChange={handleUpload}
+
+        />
 
       </div>
 
@@ -47,6 +149,11 @@ function UploadZone() {
       <div className="p-8">
 
         <div
+
+          onClick={() =>
+            fileInputRef.current.click()
+          }
+
           className="
             border-2
             border-dashed
@@ -62,6 +169,7 @@ function UploadZone() {
             flex-col
             items-center
           "
+
         >
 
           <div className="w-20 h-20 rounded-full bg-cyan-100 flex items-center justify-center">
@@ -79,8 +187,8 @@ function UploadZone() {
 
           <p className="mt-3 text-slate-500 text-center max-w-lg">
             Upload PDF, DOCX or TXT documents.
-            They will be chunked, embedded and indexed
-            automatically for Retrieval-Augmented Generation.
+            They will be automatically processed,
+            chunked and indexed for AI retrieval.
           </p>
 
           <div className="flex gap-3 mt-8">
@@ -101,6 +209,20 @@ function UploadZone() {
 
         </div>
 
+        {
+
+          message && (
+
+            <div className="mt-6 rounded-xl bg-emerald-50 border border-emerald-200 p-4 text-emerald-700 font-medium">
+
+              {message}
+
+            </div>
+
+          )
+
+        }
+
         {/* Bottom Cards */}
 
         <div className="grid grid-cols-3 gap-5 mt-8">
@@ -109,7 +231,9 @@ function UploadZone() {
 
             <div className="flex items-center gap-3">
 
-              <FileText className="text-cyan-600" />
+              <FileText
+                className="text-cyan-600"
+              />
 
               <div>
 
@@ -131,7 +255,9 @@ function UploadZone() {
 
             <div className="flex items-center gap-3">
 
-              <Database className="text-cyan-600" />
+              <Database
+                className="text-cyan-600"
+              />
 
               <div>
 
@@ -140,7 +266,7 @@ function UploadZone() {
                 </h4>
 
                 <p className="text-sm text-slate-500">
-                  ChromaDB Ready
+                  ChromaDB
                 </p>
 
               </div>
@@ -153,16 +279,18 @@ function UploadZone() {
 
             <div className="flex items-center gap-3">
 
-              <ShieldCheck className="text-cyan-600" />
+              <ShieldCheck
+                className="text-cyan-600"
+              />
 
               <div>
 
                 <h4 className="font-semibold text-slate-900">
-                  Processing
+                  AI Processing
                 </h4>
 
                 <p className="text-sm text-slate-500">
-                  Automatic Chunking & Embeddings
+                  Chunking + Embeddings + Indexing
                 </p>
 
               </div>
@@ -176,7 +304,9 @@ function UploadZone() {
       </div>
 
     </div>
+
   );
+
 }
 
 export default UploadZone;

@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 
 import { ChatProvider } from "./context/ChatContext";
+import { KnowledgeProvider } from "./context/KnowledgeContext";
 
 import "./index.css";
 import "./styles/globals.css";
@@ -20,7 +21,11 @@ ReactDOM.createRoot(
 
       <ChatProvider>
 
-        <App />
+        <KnowledgeProvider>
+
+          <App />
+
+        </KnowledgeProvider>
 
       </ChatProvider>
 

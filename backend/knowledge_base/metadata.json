@@ -1,0 +1,18 @@
+[
+    {
+        "id": "a6e03c17-31aa-415d-b785-2d41f3045736",
+        "filename": "MY CV.docx",
+        "type": "DOCX",
+        "chunks": 3,
+        "status": "Indexed",
+        "uploaded_at": "07 Jul 2026 14:40"
+    },
+    {
+        "id": "38c06fbb-6aae-41e0-a162-b1df04dea8f0",
+        "filename": "12402130 - infosys C++ certificate.pdf",
+        "type": "PDF",
+        "chunks": 1,
+        "status": "Indexed",
+        "uploaded_at": "07 Jul 2026 14:40"
+    }
+]

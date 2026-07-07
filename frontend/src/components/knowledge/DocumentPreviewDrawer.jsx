@@ -9,26 +9,96 @@ import {
   Languages,
 } from "lucide-react";
 
+import {
+  useEffect,
+  useState,
+} from "react";
+
+import {
+  getDocumentPreview,
+} from "../../api/knowledgeApi";
+
 import AIProcessingPipeline from "./AIProcessingPipeline";
+
 
 function DocumentPreviewDrawer({
   open,
   document,
   onClose,
 }) {
-  if (!open || !document) return null;
+
+  const [preview, setPreview] =
+    useState("");
+
+  const [loading, setLoading] =
+    useState(false);
+
+
+  useEffect(() => {
+
+    if (
+      !open ||
+      !document
+    )
+      return;
+
+    loadPreview();
+
+  }, [
+    open,
+    document,
+  ]);
+
+
+  async function loadPreview() {
+
+    try {
+
+      setLoading(true);
+
+      const data =
+        await getDocumentPreview(
+          document.id
+        );
+
+      setPreview(
+        data.preview
+      );
+
+    }
+    catch (error) {
+
+      console.error(error);
+
+      setPreview(
+        "Unable to load preview."
+      );
+
+    }
+    finally {
+
+      setLoading(false);
+
+    }
+
+  }
+
+
+  if (!open || !document)
+    return null;
+
 
   return (
+
     <div className="fixed inset-0 z-50 flex justify-end">
 
-      {/* Overlay */}
-
       <div
-        onClick={onClose}
-        className="absolute inset-0 bg-black/40 backdrop-blur-sm"
-      />
 
-      {/* Drawer */}
+        onClick={onClose}
+
+        className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+
+      />
 
       <div className="relative w-[580px] h-full bg-white shadow-2xl flex flex-col">
 
@@ -49,15 +119,18 @@ function DocumentPreviewDrawer({
           </div>
 
           <button
+
             onClick={onClose}
-            className="p-2 rounded-lg hover:bg-slate-100 transition"
+
+            className="p-2 rounded-lg hover:bg-slate-100"
+
           >
+
             <X size={22} />
+
           </button>
 
         </div>
-
-        {/* Scrollable */}
 
         <div className="flex-1 overflow-y-auto p-6 space-y-8">
 
@@ -107,7 +180,7 @@ function DocumentPreviewDrawer({
               <InfoCard
                 icon={<Database size={18} />}
                 title="Embedding"
-                value="text-embedding-004"
+                value="Gemini Embedding"
               />
 
               <InfoCard
@@ -124,8 +197,8 @@ function DocumentPreviewDrawer({
 
               <InfoCard
                 icon={<HardDrive size={18} />}
-                title="File Size"
-                value="2.3 MB"
+                title="Type"
+                value={document.type}
               />
 
               <InfoCard
@@ -138,8 +211,6 @@ function DocumentPreviewDrawer({
 
           </div>
 
-          {/* AI Pipeline */}
-
           <AIProcessingPipeline />
 
           {/* Preview */}
@@ -150,31 +221,17 @@ function DocumentPreviewDrawer({
               Preview
             </h3>
 
-            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 leading-8 text-slate-600">
+            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 whitespace-pre-wrap text-slate-700 leading-7 max-h-96 overflow-y-auto">
 
-              <p className="font-semibold text-slate-900 mb-4">
-                Password Reset Policy
-              </p>
+              {
 
-              Customers can reset their password using the
-              <strong> Forgot Password </strong>
-              option available on the login page.
+                loading
 
-              <br /><br />
+                  ? "Loading preview..."
 
-              After submitting their registered email address,
-              an OTP will be sent to verify their identity.
+                  : preview
 
-              <br /><br />
-
-              Once verified, the customer can create a new
-              password that satisfies the organization's
-              password policy.
-
-              <br /><br />
-
-              This preview will later be fetched dynamically
-              from the backend after document upload.
+              }
 
             </div>
 
@@ -185,15 +242,24 @@ function DocumentPreviewDrawer({
       </div>
 
     </div>
+
   );
+
 }
 
+
 function InfoCard({
+
   icon,
+
   title,
+
   value,
+
 }) {
+
   return (
+
     <div className="rounded-xl border border-slate-200 p-4">
 
       <div className="flex items-center gap-2 text-cyan-600">
@@ -201,17 +267,24 @@ function InfoCard({
         {icon}
 
         <span className="font-medium">
+
           {title}
+
         </span>
 
       </div>
 
       <p className="mt-3 font-bold text-slate-900">
+
         {value}
+
       </p>
 
     </div>
+
   );
+
 }
+
 
 export default DocumentPreviewDrawer;

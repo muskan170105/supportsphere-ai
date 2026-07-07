@@ -9,14 +9,25 @@ function ConversationCard({
   status,
   time,
 }) {
+
   const statusColor = {
-    Open: "bg-emerald-100 text-emerald-700",
-    Pending: "bg-amber-100 text-amber-700",
-    Escalated: "bg-red-100 text-red-700",
-    Closed: "bg-slate-200 text-slate-700",
+
+    Active:
+      "bg-emerald-100 text-emerald-700",
+
+    Waiting:
+      "bg-amber-100 text-amber-700",
+
+    Resolved:
+      "bg-slate-200 text-slate-700",
+
+    Escalated:
+      "bg-red-100 text-red-700",
+
   };
 
   return (
+
     <div
       className="
         bg-white
@@ -27,12 +38,10 @@ function ConversationCard({
         transition-all
         duration-300
         hover:border-cyan-300
-        hover:shadow-lg
       "
     >
-      {/* Top */}
 
-      <div className="flex justify-between items-start">
+      <div className="flex justify-between">
 
         <div className="flex gap-3">
 
@@ -47,18 +56,22 @@ function ConversationCard({
 
             </div>
 
-            <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-500 border-2 border-white"></span>
+            <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-500 border-2 border-white"/>
 
           </div>
 
           <div>
 
             <h3 className="font-semibold text-slate-900">
+
               {name}
+
             </h3>
 
             <p className="text-xs text-slate-500 mt-1">
+
               Premium Customer
+
             </p>
 
           </div>
@@ -66,20 +79,20 @@ function ConversationCard({
         </div>
 
         <span className="text-xs text-slate-400">
+
           {time}
+
         </span>
 
       </div>
 
-      {/* Message */}
-
       <p className="text-sm text-slate-600 mt-4 line-clamp-2">
+
         {message}
+
       </p>
 
-      {/* Bottom */}
-
-      <div className="flex items-center justify-between mt-5">
+      <div className="flex justify-between items-center mt-5">
 
         <span
           className={`
@@ -88,13 +101,16 @@ function ConversationCard({
             rounded-full
             text-xs
             font-semibold
+
             ${
               statusColor[status] ||
               "bg-cyan-100 text-cyan-700"
             }
           `}
         >
+
           {status}
+
         </span>
 
         <div className="flex items-center gap-2 text-emerald-600">
@@ -105,7 +121,9 @@ function ConversationCard({
           />
 
           <span className="text-xs font-medium">
+
             Live
+
           </span>
 
         </div>
@@ -113,7 +131,9 @@ function ConversationCard({
       </div>
 
     </div>
+
   );
+
 }
 
 export default ConversationCard;

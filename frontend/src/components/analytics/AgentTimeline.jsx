@@ -5,137 +5,239 @@ import {
   Bot,
   BadgeCheck,
   Clock3,
+  CheckCircle2,
 } from "lucide-react";
 
 function AgentTimeline({ timeline }) {
-  const icons = {
-    Planner: <BrainCircuit size={18} />,
-    Retriever: <Search size={18} />,
-    Tool: <Wrench size={18} />,
-    Response: <Bot size={18} />,
-    Evaluation: <BadgeCheck size={18} />,
+
+  const agentConfig = {
+
+    Planner: {
+      icon: <BrainCircuit size={18} />,
+      color: "bg-violet-100 text-violet-700",
+    },
+
+    Retriever: {
+      icon: <Search size={18} />,
+      color: "bg-blue-100 text-blue-700",
+    },
+
+    Tool: {
+      icon: <Wrench size={18} />,
+      color: "bg-amber-100 text-amber-700",
+    },
+
+    Response: {
+      icon: <Bot size={18} />,
+      color: "bg-cyan-100 text-cyan-700",
+    },
+
+    Evaluation: {
+      icon: <BadgeCheck size={18} />,
+      color: "bg-emerald-100 text-emerald-700",
+    },
+
   };
 
-  if (timeline.length === 0) {
+
+  if (!timeline.length) {
+
     return (
-      <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-6">
 
-        <h2 className="text-lg font-bold text-slate-900 mb-6">
-          AI Execution Pipeline
-        </h2>
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm">
 
-        <div className="flex flex-col items-center justify-center py-12">
+        <div className="border-b border-slate-200 px-6 py-5">
+
+          <h2 className="text-lg font-bold text-slate-900">
+
+            AI Execution Pipeline
+
+          </h2>
+
+          <p className="text-sm text-slate-500 mt-1">
+
+            Multi-Agent reasoning will appear here.
+
+          </p>
+
+        </div>
+
+        <div className="flex flex-col items-center justify-center py-14">
 
           <BrainCircuit
-            size={46}
+            size={54}
             className="text-slate-300"
           />
 
-          <h3 className="mt-4 font-semibold text-slate-700">
-            Waiting for AI Execution
+          <h3 className="mt-5 font-semibold text-slate-700">
+
+            Waiting for execution
+
           </h3>
 
-          <p className="text-sm text-slate-500 mt-2 text-center">
-            Send a customer message to visualize how
-            SupportSphere AI processes every request.
+          <p className="text-sm text-slate-500 mt-2 text-center max-w-xs">
+
+            Send a customer message to visualize every
+            AI agent involved in the orchestration
+            pipeline.
+
           </p>
 
         </div>
 
       </div>
+
     );
+
   }
 
+
   return (
-    <div className="bg-white border border-slate-200 rounded-2xl shadow-sm">
+
+    <div className="bg-white rounded-2xl border border-slate-200 shadow-sm">
 
       {/* Header */}
 
       <div className="border-b border-slate-200 px-6 py-5">
 
         <h2 className="text-lg font-bold text-slate-900">
+
           AI Execution Pipeline
+
         </h2>
 
         <p className="text-sm text-slate-500 mt-1">
-          Live execution of enterprise AI agents
+
+          Live orchestration of SupportSphere AI
+
         </p>
 
       </div>
 
-      {/* Timeline */}
 
-      <div className="p-6">
+      {/* Pipeline */}
 
-        {timeline.map((step, index) => (
+      <div className="p-6 space-y-5">
 
-          <div
-            key={index}
-            className="flex gap-4 relative pb-8 last:pb-0"
-          >
+        {
 
-            {/* Line */}
+          timeline.map((step, index) => {
 
-            {index !== timeline.length - 1 && (
+            const config =
+              agentConfig[step.agent] || {
 
-              <div className="absolute left-5 top-12 h-full border-l-2 border-slate-200"></div>
+                icon: <Bot size={18} />,
 
-            )}
+                color:
+                  "bg-slate-100 text-slate-700",
 
-            {/* Icon */}
+              };
 
-            <div className="w-10 h-10 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-700 z-10">
+            return (
 
-              {icons[step.agent] || <Bot size={18} />}
+              <div
+                key={index}
+                className="relative"
+              >
 
-            </div>
+                {
 
-            {/* Content */}
+                  index !==
+                    timeline.length - 1 && (
 
-            <div className="flex-1">
+                    <div className="absolute left-5 top-12 h-full border-l-2 border-dashed border-slate-200"/>
 
-              <div className="flex items-center justify-between">
+                  )
 
-                <h3 className="font-semibold text-slate-900">
+                }
 
-                  {step.agent} Agent
+                <div className="flex gap-4">
 
-                </h3>
+                  {/* Icon */}
 
-                <span className="flex items-center gap-1 text-xs text-emerald-600 font-semibold">
+                  <div
+                    className={`
+                      w-10
+                      h-10
+                      rounded-full
+                      flex
+                      items-center
+                      justify-center
+                      shrink-0
+                      z-10
+                      ${config.color}
+                    `}
+                  >
 
-                  <BadgeCheck size={14} />
+                    {config.icon}
 
-                  {step.status}
+                  </div>
 
-                </span>
+
+                  {/* Card */}
+
+                  <div className="flex-1 rounded-xl border border-slate-200 bg-slate-50 p-4">
+
+                    <div className="flex justify-between items-center">
+
+                      <h3 className="font-semibold text-slate-900">
+
+                        {step.agent} Agent
+
+                      </h3>
+
+                      <span className="flex items-center gap-1 text-emerald-600 text-xs font-semibold">
+
+                        <CheckCircle2 size={14} />
+
+                        {step.status}
+
+                      </span>
+
+                    </div>
+
+                    <p className="text-sm text-slate-600 mt-3">
+
+                      {step.description}
+
+                    </p>
+
+                    <div className="flex items-center justify-between mt-4">
+
+                      <div className="flex items-center gap-2 text-xs text-slate-500">
+
+                        <Clock3 size={14} />
+
+                        Completed
+
+                      </div>
+
+                      <span className="text-xs font-medium text-cyan-700">
+
+                        Step {index + 1}
+
+                      </span>
+
+                    </div>
+
+                  </div>
+
+                </div>
 
               </div>
 
-              <p className="text-sm text-slate-600 mt-2">
+            );
 
-                {step.description}
+          })
 
-              </p>
-
-              <div className="flex items-center gap-2 mt-3 text-xs text-slate-400">
-
-                <Clock3 size={14} />
-
-                Completed successfully
-
-              </div>
-
-            </div>
-
-          </div>
-
-        ))}
+        }
 
       </div>
 
     </div>
+
   );
+
 }
 
 export default AgentTimeline;

@@ -7,31 +7,72 @@ import KnowledgeStats from "../components/knowledge/KnowledgeStats";
 import DocumentPreviewDrawer from "../components/knowledge/DocumentPreviewDrawer";
 import DeleteDocumentModal from "../components/knowledge/DeleteDocumentModal";
 
+import {
+  deleteDocument,
+} from "../api/knowledgeApi";
+
+import {
+  useKnowledge,
+} from "../context/KnowledgeContext";
+
+
 function KnowledgeBase() {
 
-  const [selectedDocument, setSelectedDocument] = useState(null);
+  const [selectedDocument, setSelectedDocument] =
+    useState(null);
 
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [drawerOpen, setDrawerOpen] =
+    useState(false);
 
-  const [deleteOpen, setDeleteOpen] = useState(false);
+  const [deleteOpen, setDeleteOpen] =
+    useState(false);
+
+  const {
+    refreshDocuments,
+  } = useKnowledge();
+
 
   function handleView(document) {
+
     setSelectedDocument(document);
+
     setDrawerOpen(true);
+
   }
+
 
   function handleDelete(document) {
+
     setSelectedDocument(document);
+
     setDeleteOpen(true);
-  }
-
-  function confirmDelete(document) {
-
-    console.log("Delete:", document);
-
-    setDeleteOpen(false);
 
   }
+
+
+  async function confirmDelete(document) {
+
+    try {
+
+      await deleteDocument(
+        document.id
+      );
+
+      await refreshDocuments();
+
+      setDeleteOpen(false);
+
+      setSelectedDocument(null);
+
+    }
+    catch (error) {
+
+      console.error(error);
+
+    }
+
+  }
+
 
   return (
 
@@ -46,7 +87,8 @@ function KnowledgeBase() {
           </h1>
 
           <p className="text-slate-500 mt-2">
-            Manage documents powering your AI Retrieval-Augmented Generation system.
+            Manage documents powering your AI
+            Retrieval-Augmented Generation system.
           </p>
 
         </div>
@@ -56,33 +98,61 @@ function KnowledgeBase() {
       <KnowledgeStats />
 
       <div className="mt-8">
+
         <UploadZone />
+
       </div>
 
       <div className="mt-8">
+
         <SearchBar />
+
       </div>
 
       <div className="mt-8">
 
         <DocumentTable
+
           onView={handleView}
+
           onDelete={handleDelete}
+
         />
 
       </div>
 
       <DocumentPreviewDrawer
+
         open={drawerOpen}
+
         document={selectedDocument}
-        onClose={() => setDrawerOpen(false)}
+
+        onClose={() => {
+
+          setDrawerOpen(false);
+
+          setSelectedDocument(null);
+
+        }}
+
       />
 
       <DeleteDocumentModal
+
         open={deleteOpen}
+
         document={selectedDocument}
-        onClose={() => setDeleteOpen(false)}
+
+        onClose={() => {
+
+          setDeleteOpen(false);
+
+          setSelectedDocument(null);
+
+        }}
+
         onDelete={confirmDelete}
+
       />
 
     </div>

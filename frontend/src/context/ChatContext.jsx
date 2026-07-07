@@ -2,6 +2,7 @@ import {
   createContext,
   useContext,
   useEffect,
+  useRef,
   useState,
 } from "react";
 
@@ -20,45 +21,37 @@ import {
   getCustomer,
 } from "../api/customerApi";
 
-
 const ChatContext = createContext(null);
-
 
 export function ChatProvider({ children }) {
 
+  const initialized = useRef(false);
+
+  const sessionRef = useRef(null);
 
   const [sessionId, setSessionId] =
     useState(null);
 
-
   const [conversations, setConversations] =
     useState([]);
-
 
   const [selectedConversation, setSelectedConversation] =
     useState(null);
 
-
   const [customer, setCustomer] =
     useState(null);
-
 
   const [messages, setMessages] =
     useState([]);
 
-
   const [timeline, setTimeline] =
     useState([]);
-
 
   const [loading, setLoading] =
     useState(false);
 
-
   const [error, setError] =
     useState(null);
-
-
 
   // =====================================================
   // INITIALIZATION
@@ -66,11 +59,14 @@ export function ChatProvider({ children }) {
 
   useEffect(() => {
 
+    if (initialized.current)
+      return;
+
+    initialized.current = true;
+
     initialize();
 
   }, []);
-
-
 
   async function initialize() {
 
@@ -78,26 +74,24 @@ export function ChatProvider({ children }) {
 
       setError(null);
 
-
       const session =
         await startChat();
 
+      sessionRef.current =
+        session.session_id;
 
       setSessionId(
         session.session_id
       );
 
-
       const data =
         await getConversations();
-
 
       setConversations(
         data
       );
 
-
-      if(data.length > 0){
+      if (data.length > 0) {
 
         await selectConversation(
           data[0],
@@ -106,9 +100,8 @@ export function ChatProvider({ children }) {
 
       }
 
-
     }
-    catch(err){
+    catch (err) {
 
       console.error(err);
 
@@ -120,74 +113,58 @@ export function ChatProvider({ children }) {
 
   }
 
-
-
-
-
   // =====================================================
   // CHANGE CONVERSATION
   // =====================================================
 
-
   async function selectConversation(
     conversation,
-    currentSession = sessionId
-  ){
+    currentSession = sessionRef.current
+  ) {
 
     setSelectedConversation(
       conversation
     );
 
-
     setMessages([]);
 
     setTimeline([]);
 
-
     try {
-
 
       const customerData =
         await getCustomer(
           conversation.customer_id
         );
 
-
       setCustomer(
         customerData
       );
 
-
-      if(currentSession){
-
+      if (currentSession) {
 
         const history =
           await getHistory(
             currentSession
           );
 
-
         setMessages(
           history.messages || []
         );
-
 
         const timelineData =
           await getTimeline(
             currentSession
           );
 
-
         setTimeline(
           timelineData || []
         );
 
-
       }
 
-
     }
-    catch(err){
+    catch (err) {
 
       console.error(
         "Conversation loading failed",
@@ -198,137 +175,105 @@ export function ChatProvider({ children }) {
 
   }
 
-
-
-
-
   // =====================================================
   // SEND MESSAGE
   // =====================================================
 
+  async function sendMessage(message) {
 
-  async function sendMessage(message){
-
-
-    if(!sessionId)
+    if (!sessionRef.current)
       return;
 
-
-    try{
-
+    try {
 
       setLoading(true);
 
       setError(null);
 
-
-
       setMessages(prev => [
 
         ...prev,
 
         {
-          sender:"Customer",
+          sender: "Customer",
           message,
         }
 
       ]);
 
-
-
       const response =
         await sendChatMessage(
-          sessionId,
+          sessionRef.current,
           message
         );
-
-
 
       setMessages(prev => [
 
         ...prev,
 
         {
-          sender:"AI",
+          sender: "AI",
           message: response.response,
         }
 
       ]);
 
-
-
       setTimeline(
         response.timeline || []
       );
 
-
     }
-    catch(err){
-
+    catch (err) {
 
       console.error(err);
-
 
       setMessages(prev => [
 
         ...prev,
 
         {
-          sender:"AI",
+          sender: "AI",
           message:
-          "Sorry, I was unable to process your request.",
+            "Sorry, I was unable to process your request.",
         }
 
       ]);
-
 
       setError(
         "Message failed"
       );
 
-
     }
-    finally{
-
+    finally {
 
       setLoading(false);
-
 
     }
 
   }
 
-
-
-
-
   // =====================================================
   // REFRESH TIMELINE
   // =====================================================
 
+  async function refreshTimeline() {
 
-  async function refreshTimeline(){
-
-    if(!sessionId)
+    if (!sessionRef.current)
       return;
 
-
-    try{
-
+    try {
 
       const data =
         await getTimeline(
-          sessionId
+          sessionRef.current
         );
-
 
       setTimeline(
         data
       );
 
-
     }
-    catch(err){
+    catch (err) {
 
       console.error(err);
 
@@ -336,14 +281,7 @@ export function ChatProvider({ children }) {
 
   }
 
-
-
-
-
   const value = {
-
-
-    // state
 
     sessionId,
 
@@ -361,19 +299,13 @@ export function ChatProvider({ children }) {
 
     error,
 
-
-    // actions
-
     selectConversation,
 
     sendMessage,
 
     refreshTimeline,
 
-
   };
-
-
 
   return (
 
@@ -389,20 +321,12 @@ export function ChatProvider({ children }) {
 
 }
 
-
-
-
-
-export function useChat(){
-
+export function useChat() {
 
   const context =
-    useContext(
-      ChatContext
-    );
+    useContext(ChatContext);
 
-
-  if(!context){
+  if (!context) {
 
     throw new Error(
       "useChat must be used inside ChatProvider"
@@ -410,8 +334,6 @@ export function useChat(){
 
   }
 
-
   return context;
-
 
 }
