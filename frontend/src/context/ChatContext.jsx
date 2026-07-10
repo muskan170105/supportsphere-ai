@@ -101,6 +101,7 @@ export function ChatProvider({ children }) {
       }
 
     }
+
     catch (err) {
 
       console.error(err);
@@ -119,7 +120,7 @@ export function ChatProvider({ children }) {
 
   async function selectConversation(
     conversation,
-    currentSession = sessionRef.current
+    currentSession = sessionRef.current,
   ) {
 
     setSelectedConversation(
@@ -164,6 +165,7 @@ export function ChatProvider({ children }) {
       }
 
     }
+
     catch (err) {
 
       console.error(
@@ -190,31 +192,73 @@ export function ChatProvider({ children }) {
 
       setError(null);
 
+      // Customer Message
+
       setMessages(prev => [
 
         ...prev,
 
         {
+
           sender: "Customer",
+
           message,
-        }
+
+        },
 
       ]);
 
+      // Backend Response
+
       const response =
         await sendChatMessage(
+
           sessionRef.current,
-          message
+
+          message,
+
         );
+
+      // AI Message
 
       setMessages(prev => [
 
         ...prev,
 
         {
+
           sender: "AI",
+
           message: response.response,
-        }
+
+          confidence: response.confidence,
+
+          confidenceLevel:
+            response.confidence_level,
+
+          confidenceReason:
+            response.confidence_reason,
+
+          sources:
+            response.sources || [],
+
+          // ============================
+          // Retrieval Inspector
+          // ============================
+
+          planner:
+            response.planner,
+
+          retriever:
+            response.retriever,
+
+          tool:
+            response.tool,
+
+          responseExecution:
+            response.response_execution,
+
+        },
 
       ]);
 
@@ -223,6 +267,7 @@ export function ChatProvider({ children }) {
       );
 
     }
+
     catch (err) {
 
       console.error(err);
@@ -232,10 +277,29 @@ export function ChatProvider({ children }) {
         ...prev,
 
         {
+
           sender: "AI",
+
           message:
             "Sorry, I was unable to process your request.",
-        }
+
+          confidence: 0,
+
+          confidenceLevel: "Low",
+
+          confidenceReason: "",
+
+          sources: [],
+
+          planner: null,
+
+          retriever: null,
+
+          tool: null,
+
+          responseExecution: null,
+
+        },
 
       ]);
 
@@ -244,6 +308,7 @@ export function ChatProvider({ children }) {
       );
 
     }
+
     finally {
 
       setLoading(false);
@@ -273,6 +338,7 @@ export function ChatProvider({ children }) {
       );
 
     }
+
     catch (err) {
 
       console.error(err);

@@ -1,7 +1,5 @@
 from agents.history import HistoryAgent
-from state.conversation_state import ConversationState
-
-
+from core.memory.conversation_state import ConversationState
 class Session:
     """
     Represents one customer conversation session.

@@ -108,7 +108,11 @@ function Dashboard() {
 
         <div className="col-span-8">
 
-          <RecentActivity />
+          <RecentActivity
+
+            timeline={analytics?.timeline || []}
+
+          />
 
         </div>
 

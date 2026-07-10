@@ -12,6 +12,12 @@ from schemas.chat_schema import (
     ChatHistoryResponse,
     ChatMessage,
     TimelineStep,
+    PlannerInspector,
+    RetrieverInspector,
+    ToolInspector,
+    ResponseInspector,
+    GuardrailInspector,
+    MemoryInspector,
 )
 
 
@@ -54,7 +60,7 @@ def chat(request: ChatRequest):
             request.session_id
         )
 
-        answer = orchestrator.run(
+        result = orchestrator.run(
             request.message
         )
 
@@ -63,13 +69,101 @@ def chat(request: ChatRequest):
         )
 
         timeline = [
+
             TimelineStep(**step)
+
             for step in session.get_timeline()
+
         ]
 
         return ChatResponse(
-            response=answer,
+
+            response=result.response,
+
+            confidence=result.confidence,
+
+            confidence_level=result.confidence_level,
+
+            confidence_reason=result.confidence_reason,
+
+            sources=result.sources,
+
+            planner=PlannerInspector(
+
+                intent=result.planner.intent,
+
+                need_rag=result.planner.need_rag,
+
+                tool=result.planner.tool,
+
+            ),
+
+            retriever=RetrieverInspector(
+
+                executed=result.retriever.executed,
+
+                retrieved_documents=result.retriever.retrieved_documents,
+
+                average_similarity=result.retriever.average_similarity,
+
+                sources=result.retriever.sources,
+
+            ),
+
+            tool=ToolInspector(
+
+                executed=result.tool.executed,
+
+                tool_name=result.tool.tool_name,
+
+            ),
+
+            response_execution=ResponseInspector(
+
+                latency=result.response_execution.latency,
+
+                confidence=result.response_execution.confidence,
+
+                confidence_level=result.response_execution.confidence_level,
+
+            ),
+
+            guardrail=GuardrailInspector(
+
+                decision=result.guardrail.decision,
+
+                confirmation_required=result.guardrail.confirmation_required,
+
+                confirmation_received=result.guardrail.confirmation_received,
+
+            ) if result.guardrail else None,
+
+            memory_before=MemoryInspector(
+
+                known_parameters=result.memory_before.known_parameters,
+
+                missing_parameters=result.memory_before.missing_parameters,
+
+                current_intent=result.memory_before.current_intent,
+
+                current_tool=result.memory_before.current_tool,
+
+            ) if result.memory_before else None,
+
+            memory_after=MemoryInspector(
+
+                known_parameters=result.memory_after.known_parameters,
+
+                missing_parameters=result.memory_after.missing_parameters,
+
+                current_intent=result.memory_after.current_intent,
+
+                current_tool=result.memory_after.current_tool,
+
+            ) if result.memory_after else None,
+
             timeline=timeline,
+
         )
 
     except ValueError as e:
@@ -105,10 +199,15 @@ def get_chat_history(session_id: str):
         )
 
         history.append(
+
             ChatMessage(
+
                 sender=sender,
+
                 message=message.content,
+
             )
+
         )
 
     return ChatHistoryResponse(
@@ -131,6 +230,9 @@ def get_timeline(session_id: str):
     )
 
     return [
+
         TimelineStep(**step)
+
         for step in session.get_timeline()
+
     ]

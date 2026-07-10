@@ -1,28 +1,12 @@
 from agents.planner import planner_agent
 
-from core.logger import logger
 from core.execution_logger import execution_logger
-
-from schemas.planner_schema import (
-    PlannerOutput,
-    Intent,
-    Tool,
-)
-
-from utils.context_resolver import resolve_context
+from core.logger import logger
 
 from core.orchestration.context import PipelineContext
 
 
 class PlannerStage:
-    """
-    Executes the Planner Agent.
-
-    Handles:
-    - Query resolution
-    - Intent detection
-    - Fallback when LLM is unavailable
-    """
 
     def __init__(
         self,
@@ -32,117 +16,79 @@ class PlannerStage:
         self.llm = llm
         self.session = session
 
-
     def execute(
         self,
         context: PipelineContext,
-    ) -> bool:
+    ):
 
+        if not context.planner_required:
 
-        context.resolved_query = resolve_context(
-            user_query=context.user_query,
-            chat_history=context.chat_history,
-        )
+            logger.info(
+                "Planner skipped by Conversation Engine."
+            )
 
+            execution_logger.log(
+
+                "Conversation Engine",
+
+                "Planner skipped",
+
+            )
+
+            return
 
         logger.info(
             "Running Planner Agent..."
         )
 
+        planner_result = planner_agent(
 
-        try:
+            planner_llm=self.llm,
 
-            context.planner_result = planner_agent(
-                planner_llm=self.llm,
-                user_query=context.resolved_query,
-                chat_history=context.chat_history,
-            )
+            user_query=context.user_query,
 
+            working_memory=context.working_memory,
 
-        except Exception as e:
+            chat_history=context.chat_history,
 
-            logger.error(
-                f"Planner failed: {str(e)}"
-            )
+        )
 
+        conversation = context.conversation
 
-            # Temporary fallback for UI testing
+        if conversation is not None:
 
-            query = context.resolved_query.lower()
+            planner_result.parameters = {
 
+                **conversation.parameters,
 
-            if "order" in query or "track" in query:
+                **planner_result.parameters,
 
-                context.planner_result = PlannerOutput(
-                    intent=Intent.ORDER_TRACKING,
-                    tool=Tool.ORDER_TRACKING,
-                    need_rag=False,
-                    parameters={
-                        "order_id": "12345"
-                    },
-                    missing_parameters=[],
-                )
+            }
 
+        context.planner_result = planner_result
 
-            elif "refund" in query:
+        self.session.conversation_state.update_from_planner(
 
-                context.planner_result = PlannerOutput(
-                    intent=Intent.REFUND_REQUEST,
-                    tool=Tool.REFUND_REQUEST,
-                    need_rag=False,
-                    parameters={},
-                    missing_parameters=[],
-                )
+            planner_result
 
+        )
 
-            elif "password" in query:
+        execution_logger.log(
 
-                context.planner_result = PlannerOutput(
-                    intent=Intent.PASSWORD_RESET,
-                    tool=Tool.PASSWORD_RESET,
-                    need_rag=False,
-                    parameters={},
-                    missing_parameters=[],
-                )
+            "Planner Agent",
 
+            f"Intent: {planner_result.intent.value}",
 
-            else:
-
-                context.planner_result = PlannerOutput(
-                    intent=Intent.GENERAL_INFORMATION,
-                    tool=None,
-                    need_rag=False,
-                    parameters={},
-                    missing_parameters=[],
-                )
-
-
-            execution_logger.log(
-                "Planner Agent",
-                "Fallback intent classification used"
-            )
-
-
-        logger.info(
-            f"Intent : {context.planner_result.intent}"
         )
 
         logger.info(
-            f"Need RAG : {context.planner_result.need_rag}"
+            f"Intent : {planner_result.intent.value}"
         )
 
         logger.info(
-            f"Tool : {context.planner_result.tool}"
+            f"Need RAG : {planner_result.need_rag}"
         )
 
-
-        if context.planner_result.missing_parameters:
-
-            self.session.conversation_state.save(
-                context.planner_result
-            )
-
-            return False
-
-
-        return True
+        logger.info(
+            f"Tool : {planner_result.tool}"
+        )

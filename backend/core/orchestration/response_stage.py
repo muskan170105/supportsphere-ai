@@ -8,13 +8,11 @@ from core.orchestration.context import PipelineContext
 
 class ResponseStage:
     """
-    Generates the final AI response.
+    Generates the final response.
 
-    Handles:
-    - Normal LLM response generation
-    - Graceful fallback when LLM is unavailable
+    Works identically in both
+    Production and Developer Mode.
     """
-
 
     def __init__(
         self,
@@ -24,109 +22,95 @@ class ResponseStage:
         self.llm = llm
         self.session = session
 
-
     def execute(
         self,
         context: PipelineContext,
     ):
-        """
-        Generate the AI response.
-        """
-
-        if context.planner_result is None:
-            raise ValueError(
-                "Planner result is missing."
-            )
-
 
         logger.info(
             "Running Response Agent..."
         )
 
+        planner_result = context.planner_result
+
+        # ==========================================
+        # Planner skipped
+        # ==========================================
+
+        if planner_result is None and context.working_memory:
+
+            memory = context.working_memory
+
+            class PlannerLike:
+
+                intent = memory.current_intent
+
+                tool = memory.current_tool
+
+                parameters = memory.parameters
+
+                missing_parameters = []
+
+                need_rag = False
+
+            planner_result = PlannerLike()
 
         try:
 
             context.answer = response_agent(
-                llm=self.llm,
+
+                response_llm=self.llm,
+
                 user_query=context.user_query,
-                planner_result=context.planner_result,
-                retrieved_context=context.retrieved_context,
+
+                planner_result=planner_result,
+
                 tool_result=context.tool_result,
+
+                retrieved_context=context.retrieved_context,
+
                 chat_history=self.session.history.format_history(),
+
             )
 
+            # ==========================================
+            # Memory
+            # ==========================================
+
+            if context.working_memory:
+
+                context.working_memory.last_answer = (
+                    context.answer
+                )
+
+            # ==========================================
+            # History
+            # ==========================================
+
+            self.session.history.add_user_message(
+                context.user_query
+            )
+
+            self.session.history.add_ai_message(
+                context.answer
+            )
 
             execution_logger.log(
-                "Response Agent",
-                "Generated final AI response"
-            )
 
+                "Response Agent",
+
+                "Generated final AI response",
+
+            )
 
             logger.info(
                 "Response generated."
             )
 
-
         except Exception as e:
 
-            logger.error(
-                f"LLM Response failed: {str(e)}"
-            )
+            logger.exception(e)
 
-
-            # ---------------------------------------
-            # Temporary fallback for UI testing
-            # ---------------------------------------
-
-            intent = context.planner_result.intent.value
-
-
-            if intent == "ORDER_TRACKING":
-
-                context.answer = (
-                    "Your order #12345 is currently out for delivery. "
-                    "It is expected to arrive tomorrow."
-                )
-
-
-            elif intent == "REFUND_REQUEST":
-
-                context.answer = (
-                    "Your refund request has been received. "
-                    "The refund will be processed within 5-7 business days."
-                )
-
-
-            elif intent == "PAYMENT_FAILURE":
-
-                context.answer = (
-                    "We noticed a payment issue. "
-                    "Please retry the payment or use another payment method."
-                )
-
-
-            elif intent == "PASSWORD_RESET":
-
-                context.answer = (
-                    "You can reset your password using the "
-                    "Forgot Password option on the login page."
-                )
-
-
-            else:
-
-                context.answer = (
-                    "Thank you for contacting SupportSphere AI. "
-                    "How can I assist you today?"
-                )
-
-
-            execution_logger.log(
-                "Response Agent",
-                "Fallback response generated due to LLM unavailability"
-            )
-
-
-            logger.info(
-                "Fallback response generated."
+            context.answer = (
+                "Sorry, I couldn't generate a response."
             )

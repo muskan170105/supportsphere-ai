@@ -1,42 +1,84 @@
+from langchain_core.messages import (
+    HumanMessage,
+    SystemMessage,
+)
+
 from prompts.response_prompt import RESPONSE_PROMPT
 
-from core.execution_logger import execution_logger
+from core.config import settings
+from dev.dev_service import DevService
 
 
 def response_agent(
-    llm,
+    response_llm,
     user_query: str,
     planner_result,
-    retrieved_context: str | None,
-    tool_result: dict | None,
-    chat_history: str,
+    tool_result=None,
+    retrieved_context="",
+    chat_history=None,
 ):
     """
-    Response Agent
+    Response Agent.
 
-    Responsibilities
-    ----------------
-    - Generate the final customer response.
-    - Ask for missing information when required.
-    - Use retrieved knowledge.
-    - Use business tool results.
-    - Never make business decisions.
+    DEV_MODE:
+        Uses DevService.
+
+    Production:
+        Uses Gemini.
     """
 
-    prompt = RESPONSE_PROMPT.format(
-        chat_history=chat_history,
-        question=user_query,
-        intent=planner_result.intent,
-        missing_parameters=planner_result.missing_parameters,
-        retrieved_context=retrieved_context or "No retrieved context available.",
-        tool_result=tool_result or "No tool was executed.",
+    # =====================================================
+    # Developer Mode
+    # =====================================================
+
+    if settings.DEV_MODE:
+
+        return DevService.response(
+
+            planner_result=planner_result,
+
+            tool_result=tool_result,
+
+            retrieved_context=retrieved_context,
+
+        )
+
+    # =====================================================
+    # Production
+    # =====================================================
+
+    messages = [
+
+        SystemMessage(
+
+            content=RESPONSE_PROMPT.format(
+
+                context=retrieved_context,
+
+                tool_result=tool_result,
+
+            )
+
+        )
+
+    ]
+
+    if chat_history:
+
+        messages.extend(
+            chat_history
+        )
+
+    messages.append(
+
+        HumanMessage(
+            content=user_query
+        )
+
     )
 
-    response = llm.invoke(prompt)
-
-    execution_logger.log(
-        "Response Agent",
-        "Generated final response"
+    response = response_llm.invoke(
+        messages
     )
 
     return response.content

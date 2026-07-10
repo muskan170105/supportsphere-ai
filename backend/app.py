@@ -3,16 +3,15 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from routers.chat import router as chat_router
 from routers.conversations import router as conversation_router
-from routers.knowledge_base import (
-    router as knowledge_base_router,
-)
+from routers.knowledge_base import router as knowledge_base_router
+from routers.analytics import router as analytics_router
+from routers.settings import router as settings_router
 
 
 app = FastAPI(
     title="SupportSphere AI",
     version="1.0.0",
 )
-
 
 # ==========================================================
 # CORS
@@ -27,7 +26,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 # ==========================================================
 # Health Check
@@ -49,6 +47,8 @@ app.include_router(chat_router)
 
 app.include_router(conversation_router)
 
-app.include_router(
-    knowledge_base_router
-)
+app.include_router(knowledge_base_router)
+
+app.include_router(analytics_router)
+
+app.include_router(settings_router)

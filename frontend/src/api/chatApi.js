@@ -1,7 +1,11 @@
 import axiosClient from "./axiosClient";
 
 
-export async function startChat(){
+// =====================================================
+// Start Chat
+// =====================================================
+
+export async function startChat() {
 
   const response =
     await axiosClient.post(
@@ -13,19 +17,28 @@ export async function startChat(){
 }
 
 
+// =====================================================
+// Send Message
+// =====================================================
 
 export async function sendMessage(
   sessionId,
-  message
-){
+  message,
+) {
 
   const response =
     await axiosClient.post(
+
       "/chat",
+
       {
+
         session_id: sessionId,
+
         message,
+
       }
+
     );
 
   return response.data;
@@ -33,14 +46,19 @@ export async function sendMessage(
 }
 
 
+// =====================================================
+// History
+// =====================================================
 
 export async function getHistory(
-  sessionId
-){
+  sessionId,
+) {
 
   const response =
     await axiosClient.get(
+
       `/chat/history/${sessionId}`
+
     );
 
   return response.data;
@@ -48,14 +66,19 @@ export async function getHistory(
 }
 
 
+// =====================================================
+// Timeline
+// =====================================================
 
 export async function getTimeline(
-  sessionId
-){
+  sessionId,
+) {
 
   const response =
     await axiosClient.get(
+
       `/chat/timeline/${sessionId}`
+
     );
 
   return response.data;

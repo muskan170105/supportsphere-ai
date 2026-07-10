@@ -6,9 +6,6 @@ from pydantic import BaseModel, Field
 # ==========================================================
 
 class TimelineStep(BaseModel):
-    """
-    One AI execution step.
-    """
 
     agent: str
 
@@ -18,13 +15,70 @@ class TimelineStep(BaseModel):
 
 
 # ==========================================================
+# Inspector Models
+# ==========================================================
+
+class PlannerInspector(BaseModel):
+
+    intent: str
+
+    need_rag: bool
+
+    tool: str | None
+
+
+class RetrieverInspector(BaseModel):
+
+    executed: bool
+
+    retrieved_documents: int
+
+    average_similarity: float | None
+
+    sources: list[str]
+
+
+class ToolInspector(BaseModel):
+
+    executed: bool
+
+    tool_name: str | None
+
+
+class ResponseInspector(BaseModel):
+
+    latency: float
+
+    confidence: float
+
+    confidence_level: str
+
+
+class GuardrailInspector(BaseModel):
+
+    decision: str
+
+    confirmation_required: bool
+
+    confirmation_received: bool
+
+
+class MemoryInspector(BaseModel):
+
+    known_parameters: dict
+
+    missing_parameters: list[str]
+
+    current_intent: str | None
+
+    current_tool: str | None
+
+
+# ==========================================================
 # Chat History
 # ==========================================================
 
 class ChatMessage(BaseModel):
-    """
-    One chat message.
-    """
 
     sender: str
 
@@ -32,9 +86,6 @@ class ChatMessage(BaseModel):
 
 
 class ChatHistoryResponse(BaseModel):
-    """
-    Chat history.
-    """
 
     messages: list[ChatMessage]
 
@@ -44,9 +95,6 @@ class ChatHistoryResponse(BaseModel):
 # ==========================================================
 
 class StartChatResponse(BaseModel):
-    """
-    Returned when a new chat session starts.
-    """
 
     session_id: str = Field(
         ...,
@@ -59,9 +107,6 @@ class StartChatResponse(BaseModel):
 # ==========================================================
 
 class ChatRequest(BaseModel):
-    """
-    Incoming customer request.
-    """
 
     session_id: str = Field(
         ...,
@@ -79,10 +124,29 @@ class ChatRequest(BaseModel):
 # ==========================================================
 
 class ChatResponse(BaseModel):
-    """
-    AI response.
-    """
 
     response: str
+
+    confidence: float
+
+    confidence_level: str
+
+    confidence_reason: str
+
+    sources: list[str]
+
+    planner: PlannerInspector
+
+    retriever: RetrieverInspector
+
+    tool: ToolInspector
+
+    response_execution: ResponseInspector
+
+    guardrail: GuardrailInspector | None = None
+
+    memory_before: MemoryInspector | None = None
+
+    memory_after: MemoryInspector | None = None
 
     timeline: list[TimelineStep]

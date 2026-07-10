@@ -107,11 +107,22 @@ function ChatWindow({
           messages.map((message, index) => (
 
             <MessageBubble
-              key={index}
-              sender={message.sender}
-              message={message.message}
-            />
 
+                key={index}
+
+                sender={message.sender}
+
+                message={message.message}
+
+                confidence={message.confidence}
+
+                confidenceLevel={message.confidenceLevel}
+
+                confidenceReason={message.confidenceReason}
+
+                sources={message.sources}
+
+            />
           ))
 
         }

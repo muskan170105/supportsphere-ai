@@ -1,52 +1,214 @@
-from schemas.planner_schema import PlannerOutput
-from utils.parameter_extractor import extract_parameter
+from dataclasses import dataclass, field
+from typing import Any
+
+
+@dataclass
+class WorkingMemory:
+    """
+    Stores the current conversational context.
+
+    Unlike chat history, this represents what the
+    assistant currently knows about the user's task.
+    """
+
+    current_intent: str | None = None
+
+    current_tool: str | None = None
+
+    parameters: dict = field(default_factory=dict)
+
+    missing_parameters: list[str] = field(default_factory=list)
+
+    last_tool_result: dict | None = None
+
+    last_retrieved_sources: list[str] = field(default_factory=list)
+
+    last_answer: str | None = None
+
+    entities: dict = field(default_factory=dict)
+
+    conversation_summary: str = ""
+
+    retrieval_cache: Any | None = None
+
+    # =====================================================
+
+    def has_active_task(self):
+        return self.current_intent is not None
+
+    # =====================================================
+
+    def switch_intent(self, planner_result):
+        """
+        Start a new task while preserving reusable customer
+        information and clearing task-specific state.
+        """
+
+        if (
+            self.current_intent is not None
+            and self.current_intent != planner_result.intent.value
+        ):
+            self.last_tool_result = None
+            self.last_answer = None
+            self.last_retrieved_sources.clear()
+            self.conversation_summary = ""
+
+            if self.retrieval_cache:
+                self.retrieval_cache.clear()
+
+        self.current_intent = planner_result.intent.value
+
+        self.current_tool = (
+            planner_result.tool.value
+            if planner_result.tool
+            else None
+        )
+
+        reusable = {
+            "order_id",
+            "customer_id",
+            "email",
+            "phone",
+            "username",
+            "account_id",
+        }
+
+        merged = {
+            k: v
+            for k, v in self.parameters.items()
+            if k in reusable
+        }
+
+        merged.update(planner_result.parameters)
+
+        self.parameters = merged
+
+        self.entities.update(merged)
+
+        self.missing_parameters = list(
+            planner_result.missing_parameters
+        )
+
+    # =====================================================
+
+    def update_from_planner(
+        self,
+        planner_result,
+    ):
+        self.switch_intent(planner_result)
+
+    # =====================================================
+
+    def update_parameter(
+        self,
+        key,
+        value,
+    ):
+        self.parameters[key] = value
+        self.entities[key] = value
+
+        if key in self.missing_parameters:
+            self.missing_parameters.remove(key)
+
+    # =====================================================
+
+    def remember_tool_result(
+        self,
+        result,
+    ):
+        self.last_tool_result = result
+
+    # =====================================================
+
+    def remember_sources(
+        self,
+        sources,
+    ):
+        self.last_retrieved_sources = sources.copy()
+
+    # =====================================================
+
+    def remember_answer(
+        self,
+        answer,
+    ):
+        self.last_answer = answer
+
+    # =====================================================
+
+    def clear(self):
+        self.current_intent = None
+        self.current_tool = None
+
+        self.parameters.clear()
+        self.missing_parameters.clear()
+
+        self.last_tool_result = None
+        self.last_retrieved_sources.clear()
+        self.last_answer = None
+
+        self.entities.clear()
+
+        self.conversation_summary = ""
+
+        if self.retrieval_cache:
+            self.retrieval_cache.clear()
 
 
 class ConversationState:
     """
-    Stores a pending PlannerOutput while waiting
-    for missing information from the user.
+    Maintains pending slot filling.
+
+    Uses WorkingMemory underneath.
     """
 
     def __init__(self):
-        self.pending_request: PlannerOutput | None = None
+        self.memory = WorkingMemory()
 
-    def is_waiting(self) -> bool:
-        return self.pending_request is not None
+    # =====================================================
 
-    def save(self, planner_result: PlannerOutput):
-        self.pending_request = planner_result
+    def is_waiting(self):
+        return len(self.memory.missing_parameters) > 0
 
-    def get(self) -> PlannerOutput | None:
-        return self.pending_request
+    # =====================================================
 
-    def fill_next_parameter(self, value: str) -> PlannerOutput:
-        """
-        Fill the next missing parameter.
-        """
+    def has_more_missing_parameters(self):
+        return self.is_waiting()
 
-        if self.pending_request is None:
-            raise ValueError("No pending request.")
+    # =====================================================
 
-        planner_result = self.pending_request
+    def fill_next_parameter(
+        self,
+        value,
+    ):
+        if not self.memory.missing_parameters:
+            return None
 
-        parameter_name = planner_result.missing_parameters.pop(0)
+        parameter = self.memory.missing_parameters[0]
 
-        extracted_value = extract_parameter(
-            parameter_name=parameter_name,
-            text=value,
+        self.memory.update_parameter(
+            parameter,
+            value,
         )
 
-        planner_result.parameters[parameter_name] = extracted_value
+        return None
 
-        return planner_result
+    # =====================================================
 
-    def has_more_missing_parameters(self) -> bool:
+    def update_from_planner(
+        self,
+        planner_result,
+    ):
+        self.memory.update_from_planner(
+            planner_result
+        )
 
-        if self.pending_request is None:
-            return False
+    # =====================================================
 
-        return len(self.pending_request.missing_parameters) > 0
+    def update_summary(self, summary: str):
+        self.memory.conversation_summary = summary
+
+    # =====================================================
 
     def clear(self):
-        self.pending_request = None
+        self.memory.clear()

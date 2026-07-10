@@ -236,3 +236,1390 @@ TypeError: PasswordTool.execute() missing 1 required positional argument: 'email
 2026-07-07 11:08:32 | ERROR | LLM Response failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 27.549301015s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '27s'}]}}
 2026-07-07 11:08:32 | INFO | Fallback response generated.
 2026-07-07 11:08:32 | INFO | ================================================================================
+2026-07-07 15:03:36 | INFO | ================================================================================
+2026-07-07 15:03:36 | INFO | User Query : what is your refund policy
+2026-07-07 15:03:36 | INFO | Running Planner Agent...
+2026-07-07 15:03:38 | INFO | Intent : GENERAL_INFORMATION
+2026-07-07 15:03:38 | INFO | Need RAG : True
+2026-07-07 15:03:38 | INFO | Tool : None
+2026-07-07 15:03:38 | INFO | Running Retriever Agent...
+2026-07-07 15:03:39 | INFO | Retrieved 1 source document(s).
+2026-07-07 15:03:39 | INFO | Retriever completed.
+2026-07-07 15:03:39 | INFO | Running Response Agent...
+2026-07-07 15:03:41 | INFO | Response generated.
+2026-07-07 15:03:41 | INFO | ================================================================================
+2026-07-07 15:09:56 | INFO | ================================================================================
+2026-07-07 15:09:56 | INFO | User Query : what is your refund policy
+2026-07-07 15:09:56 | INFO | Running Planner Agent...
+2026-07-07 15:09:58 | INFO | Intent : GENERAL_INFORMATION
+2026-07-07 15:09:58 | INFO | Need RAG : True
+2026-07-07 15:09:58 | INFO | Tool : None
+2026-07-07 15:09:58 | INFO | Running Retriever Agent...
+2026-07-07 15:10:00 | INFO | Retrieved 0 source document(s).
+2026-07-07 15:10:00 | INFO | Retriever completed.
+2026-07-07 15:10:00 | INFO | Running Response Agent...
+2026-07-07 15:10:01 | INFO | Response generated.
+2026-07-07 15:10:01 | INFO | ================================================================================
+2026-07-07 15:23:15 | INFO | ================================================================================
+2026-07-07 15:23:15 | INFO | User Query : What is your refund policy
+2026-07-07 15:23:15 | INFO | Running Planner Agent...
+2026-07-07 15:23:17 | INFO | Intent : GENERAL_INFORMATION
+2026-07-07 15:23:17 | INFO | Need RAG : True
+2026-07-07 15:23:17 | INFO | Tool : None
+2026-07-07 15:23:17 | INFO | Running Retriever Agent...
+2026-07-07 15:23:18 | INFO | Retrieved 1 source document(s).
+2026-07-07 15:23:18 | INFO | Retriever completed.
+2026-07-07 15:23:18 | INFO | Running Response Agent...
+2026-07-07 15:23:21 | INFO | Response generated.
+2026-07-07 15:23:21 | INFO | ================================================================================
+2026-07-07 15:38:40 | INFO | ================================================================================
+2026-07-07 15:38:40 | INFO | User Query : Where is my order?
+2026-07-07 15:38:40 | INFO | Running Planner Agent...
+2026-07-07 15:38:42 | INFO | Intent : ORDER_TRACKING
+2026-07-07 15:38:42 | INFO | Need RAG : False
+2026-07-07 15:38:42 | INFO | Tool : ORDER_TRACKING
+2026-07-07 15:38:42 | INFO | Running Response Agent...
+2026-07-07 15:38:43 | INFO | Response generated.
+2026-07-07 15:38:43 | INFO | ================================================================================
+2026-07-07 15:39:00 | INFO | ================================================================================
+2026-07-07 15:39:00 | INFO | User Query : Where is my order?
+2026-07-07 15:39:00 | INFO | Running Planner Agent...
+2026-07-07 15:39:02 | INFO | Intent : ORDER_TRACKING
+2026-07-07 15:39:02 | INFO | Need RAG : False
+2026-07-07 15:39:02 | INFO | Tool : ORDER_TRACKING
+2026-07-07 15:39:02 | INFO | Running Response Agent...
+2026-07-07 15:39:04 | INFO | Response generated.
+2026-07-07 15:39:04 | INFO | ================================================================================
+2026-07-07 15:43:55 | INFO | ================================================================================
+2026-07-07 15:43:55 | INFO | User Query : what is your refund policy
+2026-07-07 15:43:55 | INFO | Running Planner Agent...
+2026-07-07 15:43:56 | INFO | Intent : GENERAL_INFORMATION
+2026-07-07 15:43:56 | INFO | Need RAG : True
+2026-07-07 15:43:56 | INFO | Tool : None
+2026-07-07 15:43:56 | INFO | Running Retriever Agent...
+2026-07-07 15:43:58 | INFO | Retrieved 4 source document(s).
+2026-07-07 15:43:58 | INFO | Retriever completed.
+2026-07-07 15:43:58 | INFO | Running Response Agent...
+2026-07-07 15:44:00 | INFO | Response generated.
+2026-07-07 15:44:00 | INFO | ================================================================================
+2026-07-07 15:47:16 | INFO | ================================================================================
+2026-07-07 15:47:16 | INFO | User Query : what is your refund policy?
+2026-07-07 15:47:16 | INFO | Running Planner Agent...
+2026-07-07 15:47:18 | INFO | Intent : GENERAL_INFORMATION
+2026-07-07 15:47:18 | INFO | Need RAG : True
+2026-07-07 15:47:18 | INFO | Tool : None
+2026-07-07 15:47:18 | INFO | Running Retriever Agent...
+2026-07-07 15:47:19 | INFO | Retrieved 4 source document(s).
+2026-07-07 15:47:19 | INFO | Retriever completed.
+2026-07-07 15:47:19 | INFO | Running Response Agent...
+2026-07-07 15:47:21 | INFO | Response generated.
+2026-07-07 15:47:21 | INFO | ================================================================================
+2026-07-07 15:51:39 | INFO | ================================================================================
+2026-07-07 15:51:39 | INFO | User Query : what is your refund policy?
+2026-07-07 15:51:39 | INFO | Running Planner Agent...
+2026-07-07 15:51:41 | INFO | Intent : GENERAL_INFORMATION
+2026-07-07 15:51:41 | INFO | Need RAG : True
+2026-07-07 15:51:41 | INFO | Tool : None
+2026-07-07 15:51:41 | INFO | Running Retriever Agent...
+2026-07-07 15:51:42 | INFO | Retrieved 4 source document(s).
+2026-07-07 15:51:42 | INFO | Retriever completed.
+2026-07-07 15:51:42 | INFO | Running Response Agent...
+2026-07-07 15:51:44 | INFO | Response generated.
+2026-07-07 15:51:44 | INFO | ================================================================================
+2026-07-07 16:08:00 | INFO | ================================================================================
+2026-07-07 16:08:00 | INFO | User Query : I bought a customized item, will I get my money back?
+2026-07-07 16:08:00 | INFO | Running Planner Agent...
+2026-07-07 16:08:03 | INFO | Intent : REFUND_REQUEST
+2026-07-07 16:08:03 | INFO | Need RAG : True
+2026-07-07 16:08:03 | INFO | Tool : REFUND_REQUEST
+2026-07-07 16:08:03 | INFO | Running Response Agent...
+2026-07-07 16:08:04 | INFO | Response generated.
+2026-07-07 16:08:04 | INFO | ================================================================================
+2026-07-07 16:17:49 | INFO | ================================================================================
+2026-07-07 16:17:49 | INFO | User Query : Can I get my money back?
+2026-07-07 16:17:49 | INFO | Running Planner Agent...
+2026-07-07 16:17:51 | INFO | Intent : GENERAL_INFORMATION
+2026-07-07 16:17:51 | INFO | Need RAG : True
+2026-07-07 16:17:51 | INFO | Tool : None
+2026-07-07 16:17:51 | INFO | Running Retriever Agent...
+2026-07-07 16:17:52 | INFO | Retrieved 4 source document(s).
+2026-07-07 16:17:52 | INFO | Retriever completed.
+2026-07-07 16:17:52 | INFO | Running Response Agent...
+2026-07-07 16:17:55 | INFO | Response generated.
+2026-07-07 16:17:55 | INFO | ================================================================================
+2026-07-07 16:18:41 | INFO | ================================================================================
+2026-07-07 16:18:41 | INFO | User Query : Are customized products refundable?
+2026-07-07 16:18:41 | INFO | Running Planner Agent...
+2026-07-07 16:18:43 | INFO | Intent : GENERAL_INFORMATION
+2026-07-07 16:18:43 | INFO | Need RAG : True
+2026-07-07 16:18:43 | INFO | Tool : None
+2026-07-07 16:18:43 | INFO | Running Retriever Agent...
+2026-07-07 16:18:44 | INFO | Retrieved 4 source document(s).
+2026-07-07 16:18:44 | INFO | Retriever completed.
+2026-07-07 16:18:44 | INFO | Running Response Agent...
+2026-07-07 16:18:48 | INFO | Response generated.
+2026-07-07 16:18:48 | INFO | ================================================================================
+2026-07-07 16:19:12 | INFO | ================================================================================
+2026-07-07 16:19:12 | INFO | User Query : Refund my order.
+2026-07-07 16:19:12 | INFO | Running Planner Agent...
+2026-07-07 16:19:47 | ERROR | Planner failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 12.346655972s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '12s'}]}}
+2026-07-07 16:19:47 | INFO | Intent : ORDER_TRACKING
+2026-07-07 16:19:47 | INFO | Need RAG : False
+2026-07-07 16:19:47 | INFO | Tool : ORDER_TRACKING
+2026-07-07 16:19:47 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-07 16:19:47 | INFO | Tool execution completed.
+2026-07-07 16:19:47 | INFO | Running Response Agent...
+2026-07-07 16:20:23 | ERROR | LLM Response failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 36.086284687s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '36s'}]}}
+2026-07-07 16:20:23 | INFO | Fallback response generated.
+2026-07-07 16:20:23 | INFO | ================================================================================
+2026-07-07 16:32:25 | INFO | ================================================================================
+2026-07-07 16:32:25 | INFO | User Query : What is your refund policy?
+2026-07-07 16:32:25 | INFO | Running Planner Agent...
+2026-07-07 16:33:02 | ERROR | Planner failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 57.696054795s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '57s'}]}}
+2026-07-07 16:33:02 | INFO | Intent : REFUND_REQUEST
+2026-07-07 16:33:02 | INFO | Need RAG : False
+2026-07-07 16:33:02 | INFO | Tool : REFUND_REQUEST
+2026-07-07 16:33:02 | INFO | Executing Tool : REFUND_REQUEST
+2026-07-07 16:33:02 | ERROR | Pipeline execution failed.
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestrator.py", line 115, in run
+    self.tool_stage.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestration\tool_stage.py", line 42, in execute
+    context.tool_result = self.tool_agent.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\agents\tool_agent.py", line 61, in execute
+    result = tool.execute(**parameters)
+TypeError: RefundTool.execute() missing 1 required positional argument: 'order_id'
+2026-07-07 16:40:49 | INFO | ================================================================================
+2026-07-07 16:40:49 | INFO | User Query : Refund my order
+2026-07-07 16:40:49 | INFO | Running Planner Agent...
+2026-07-07 16:41:25 | ERROR | Planner failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 34.24816983s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '34s'}]}}
+2026-07-07 16:41:25 | INFO | Intent : ORDER_TRACKING
+2026-07-07 16:41:25 | INFO | Need RAG : False
+2026-07-07 16:41:25 | INFO | Tool : ORDER_TRACKING
+2026-07-07 16:41:25 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-07 16:41:25 | INFO | Tool execution completed.
+2026-07-07 16:41:25 | INFO | Running Response Agent...
+2026-07-07 16:42:02 | ERROR | LLM Response failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 57.450476655s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '57s'}]}}
+2026-07-07 16:42:02 | INFO | Fallback response generated.
+2026-07-07 16:42:02 | INFO | ================================================================================
+2026-07-07 17:23:21 | INFO | ================================================================================
+2026-07-07 17:23:21 | INFO | User Query : where is my order #12345
+2026-07-07 17:23:21 | INFO | Running Planner Agent...
+2026-07-07 17:23:59 | ERROR | Planner failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 364.5115ms.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '0s'}]}}
+2026-07-07 17:23:59 | INFO | Intent : ORDER_TRACKING
+2026-07-07 17:23:59 | INFO | Need RAG : False
+2026-07-07 17:23:59 | INFO | Tool : ORDER_TRACKING
+2026-07-07 17:23:59 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-07 17:23:59 | INFO | Tool execution completed.
+2026-07-07 17:23:59 | INFO | Retriever skipped (RAG not required).
+2026-07-07 17:23:59 | INFO | Running Confidence Engine...
+2026-07-07 17:23:59 | INFO | Confidence: 45.0% (Low)
+2026-07-07 17:23:59 | INFO | Running Response Agent...
+2026-07-07 17:24:34 | ERROR | LLM Response failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 24.900479724s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '24s'}]}}
+2026-07-07 17:24:34 | INFO | Fallback response generated.
+2026-07-07 17:24:34 | INFO | ================================================================================
+2026-07-07 17:30:42 | INFO | ================================================================================
+2026-07-07 17:30:42 | INFO | User Query : where is my order #12345?
+2026-07-07 17:30:42 | INFO | Running Planner Agent...
+2026-07-07 17:31:19 | ERROR | Planner failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 40.238730286s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '40s'}]}}
+2026-07-07 17:31:19 | INFO | Intent : ORDER_TRACKING
+2026-07-07 17:31:19 | INFO | Need RAG : False
+2026-07-07 17:31:19 | INFO | Tool : ORDER_TRACKING
+2026-07-07 17:31:19 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-07 17:31:19 | INFO | Tool execution completed.
+2026-07-07 17:31:19 | INFO | Retriever skipped (RAG not required).
+2026-07-07 17:31:19 | INFO | Running Confidence Engine...
+2026-07-07 17:31:19 | INFO | Confidence: 98.0% (High)
+2026-07-07 17:31:19 | INFO | Running Response Agent...
+2026-07-07 17:31:55 | ERROR | LLM Response failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 4.464593139s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '4s'}]}}
+2026-07-07 17:31:55 | INFO | Fallback response generated.
+2026-07-07 17:31:55 | INFO | ================================================================================
+2026-07-07 17:33:17 | INFO | ================================================================================
+2026-07-07 17:33:17 | INFO | User Query : where is my order #12345?
+2026-07-07 17:33:17 | INFO | Running Planner Agent...
+2026-07-07 17:33:54 | ERROR | Planner failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 5.798066924s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '5s'}]}}
+2026-07-07 17:33:54 | INFO | Intent : ORDER_TRACKING
+2026-07-07 17:33:54 | INFO | Need RAG : False
+2026-07-07 17:33:54 | INFO | Tool : ORDER_TRACKING
+2026-07-07 17:33:54 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-07 17:33:54 | INFO | Tool execution completed.
+2026-07-07 17:33:54 | INFO | Retriever skipped (RAG not required).
+2026-07-07 17:33:54 | INFO | Running Confidence Engine...
+2026-07-07 17:33:54 | INFO | Confidence: 98.0% (High)
+2026-07-07 17:33:54 | INFO | Running Response Agent...
+2026-07-07 17:34:29 | ERROR | LLM Response failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 29.910490444s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '29s'}]}}
+2026-07-07 17:34:29 | INFO | Fallback response generated.
+2026-07-07 17:34:29 | INFO | ================================================================================
+2026-07-07 18:10:56 | INFO | ================================================================================
+2026-07-07 18:10:56 | INFO | User Query : where is my order #12345?
+2026-07-07 18:10:56 | INFO | Running Planner Agent...
+2026-07-07 18:11:33 | ERROR | Planner failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 26.803127294s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '26s'}]}}
+2026-07-07 18:11:33 | INFO | Intent : ORDER_TRACKING
+2026-07-07 18:11:33 | INFO | Need RAG : False
+2026-07-07 18:11:33 | INFO | Tool : ORDER_TRACKING
+2026-07-07 18:11:33 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-07 18:11:33 | INFO | Tool execution completed.
+2026-07-07 18:11:33 | INFO | Retriever skipped (RAG not required).
+2026-07-07 18:11:33 | INFO | Running Confidence Engine...
+2026-07-07 18:11:33 | INFO | Confidence: 98.0% (High)
+2026-07-07 18:11:33 | INFO | Running Response Agent...
+2026-07-07 18:12:10 | ERROR | LLM Response failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 49.062978537s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '49s'}]}}
+2026-07-07 18:12:10 | INFO | Fallback response generated.
+2026-07-07 18:12:10 | INFO | ================================================================================
+2026-07-07 18:22:13 | INFO | ================================================================================
+2026-07-07 18:22:13 | INFO | User Query : where is my order #12345
+2026-07-07 18:22:13 | INFO | Running Planner Agent...
+2026-07-07 18:22:51 | ERROR | Planner failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 8.741158833s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '8s'}]}}
+2026-07-07 18:22:51 | INFO | Intent : ORDER_TRACKING
+2026-07-07 18:22:51 | INFO | Need RAG : False
+2026-07-07 18:22:51 | INFO | Tool : ORDER_TRACKING
+2026-07-07 18:22:51 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-07 18:22:51 | INFO | Tool execution completed.
+2026-07-07 18:22:51 | INFO | Retriever skipped (RAG not required).
+2026-07-07 18:22:51 | INFO | Running Confidence Engine...
+2026-07-07 18:22:51 | INFO | Confidence: 98.0% (High)
+2026-07-07 18:22:51 | INFO | Running Response Agent...
+2026-07-07 18:23:26 | ERROR | LLM Response failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 33.230977282s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '33s'}]}}
+2026-07-07 18:23:26 | INFO | Fallback response generated.
+2026-07-07 18:23:26 | INFO | ================================================================================
+2026-07-07 18:27:32 | INFO | ================================================================================
+2026-07-07 18:27:32 | INFO | User Query : where is my order #12345?
+2026-07-07 18:27:32 | INFO | Running Planner Agent...
+2026-07-07 18:28:09 | ERROR | Planner failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 50.113412428s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '50s'}]}}
+2026-07-07 18:28:09 | INFO | Intent : ORDER_TRACKING
+2026-07-07 18:28:09 | INFO | Need RAG : False
+2026-07-07 18:28:09 | INFO | Tool : ORDER_TRACKING
+2026-07-07 18:28:09 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-07 18:28:09 | INFO | Tool execution completed.
+2026-07-07 18:28:09 | INFO | Retriever skipped (RAG not required).
+2026-07-07 18:28:09 | INFO | Running Confidence Engine...
+2026-07-07 18:28:09 | INFO | Confidence: 98.0% (High)
+2026-07-07 18:28:09 | INFO | Running Response Agent...
+2026-07-07 18:28:46 | ERROR | LLM Response failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 13.227516975s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '13s'}]}}
+2026-07-07 18:28:46 | INFO | Fallback response generated.
+2026-07-07 18:28:46 | INFO | ================================================================================
+2026-07-07 18:32:01 | INFO | ================================================================================
+2026-07-07 18:32:01 | INFO | User Query : where is my order #12345?
+2026-07-07 18:32:01 | INFO | Running Planner Agent...
+2026-07-07 18:32:37 | ERROR | Planner failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 22.560128387s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '22s'}]}}
+2026-07-07 18:32:37 | INFO | Intent : ORDER_TRACKING
+2026-07-07 18:32:37 | INFO | Need RAG : False
+2026-07-07 18:32:37 | INFO | Tool : ORDER_TRACKING
+2026-07-07 18:32:37 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-07 18:32:37 | INFO | Tool execution completed.
+2026-07-07 18:32:37 | INFO | Retriever skipped (RAG not required).
+2026-07-07 18:32:37 | INFO | Running Confidence Engine...
+2026-07-07 18:32:37 | INFO | Confidence: 98.0% (High)
+2026-07-07 18:32:37 | INFO | Running Response Agent...
+2026-07-07 18:33:13 | ERROR | LLM Response failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 46.476506865s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '46s'}]}}
+2026-07-07 18:33:13 | INFO | Fallback response generated.
+2026-07-07 18:33:13 | INFO | ================================================================================
+2026-07-07 18:33:43 | INFO | ================================================================================
+2026-07-07 18:33:43 | INFO | User Query : where is my order #12345?
+2026-07-07 18:33:43 | INFO | Running Planner Agent...
+2026-07-07 18:34:20 | ERROR | Planner failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 39.611528716s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '39s'}]}}
+2026-07-07 18:34:20 | INFO | Intent : ORDER_TRACKING
+2026-07-07 18:34:20 | INFO | Need RAG : False
+2026-07-07 18:34:20 | INFO | Tool : ORDER_TRACKING
+2026-07-07 18:34:20 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-07 18:34:20 | INFO | Tool execution completed.
+2026-07-07 18:34:20 | INFO | Retriever skipped (RAG not required).
+2026-07-07 18:34:20 | INFO | Running Confidence Engine...
+2026-07-07 18:34:20 | INFO | Confidence: 98.0% (High)
+2026-07-07 18:34:20 | INFO | Running Response Agent...
+2026-07-07 18:34:54 | ERROR | LLM Response failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 5.057437826s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '5s'}]}}
+2026-07-07 18:34:54 | INFO | Fallback response generated.
+2026-07-07 18:34:54 | INFO | ================================================================================
+2026-07-07 18:44:46 | INFO | ================================================================================
+2026-07-07 18:44:46 | INFO | User Query : where is my order #12345?
+2026-07-07 18:44:46 | INFO | Running Planner Agent...
+2026-07-07 18:45:22 | ERROR | Planner failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 37.476612201s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '37s'}]}}
+2026-07-07 18:45:22 | INFO | Intent : ORDER_TRACKING
+2026-07-07 18:45:22 | INFO | Need RAG : False
+2026-07-07 18:45:22 | INFO | Tool : ORDER_TRACKING
+2026-07-07 18:45:22 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-07 18:45:22 | INFO | Tool execution completed.
+2026-07-07 18:45:22 | INFO | Retriever skipped (RAG not required).
+2026-07-07 18:45:22 | INFO | Running Confidence Engine...
+2026-07-07 18:45:22 | INFO | Confidence: 98.0% (High)
+2026-07-07 18:45:22 | INFO | Running Response Agent...
+2026-07-07 18:45:59 | ERROR | LLM Response failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 624.50788ms.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '0s'}]}}
+2026-07-07 18:45:59 | INFO | Fallback response generated.
+2026-07-07 18:45:59 | INFO | ================================================================================
+2026-07-07 19:24:28 | INFO | ================================================================================
+2026-07-07 19:24:28 | INFO | User Query : where is my order #12345?
+2026-07-07 19:24:28 | INFO | Running Planner Agent...
+2026-07-07 19:25:05 | ERROR | Planner failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 54.423295643s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '54s'}]}}
+2026-07-07 19:25:05 | INFO | Intent : ORDER_TRACKING
+2026-07-07 19:25:05 | INFO | Need RAG : False
+2026-07-07 19:25:05 | INFO | Tool : ORDER_TRACKING
+2026-07-07 19:25:05 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-07 19:25:05 | INFO | Tool execution completed.
+2026-07-07 19:25:05 | INFO | Retriever skipped (RAG not required).
+2026-07-07 19:25:05 | INFO | Running Confidence Engine...
+2026-07-07 19:25:05 | INFO | Confidence: 98.0% (High)
+2026-07-07 19:25:05 | INFO | Running Response Agent...
+2026-07-07 19:25:40 | ERROR | LLM Response failed: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18.916308717s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '18s'}]}}
+2026-07-07 19:25:40 | INFO | Fallback response generated.
+2026-07-07 19:25:40 | INFO | ================================================================================
+2026-07-07 20:12:32 | INFO | ================================================================================
+2026-07-07 20:12:32 | INFO | User Query : Track my order #12345
+2026-07-07 20:12:32 | INFO | Running Memory Stage...
+2026-07-07 20:12:32 | INFO | No active task.
+2026-07-07 20:12:32 | INFO | Running Planner Agent...
+2026-07-07 20:13:09 | ERROR | Pipeline execution failed.
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_google_genai\chat_models.py", line 3302, in _generate
+    response: GenerateContentResponse = self.client.models.generate_content(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\models.py", line 6526, in generate_content
+    response = self._generate_content(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\models.py", line 4954, in _generate_content
+    response = self._api_client.request(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\_api_client.py", line 1618, in request
+    response = self._request(http_request, http_options, stream=False)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\_api_client.py", line 1409, in _request
+    return retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+  File "C:\Users\muska\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 438, in result
+    return self.__get_result()
+  File "C:\Users\muska\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 390, in __get_result
+    raise self._exception
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\_api_client.py", line 1388, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\errors.py", line 155, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\errors.py", line 184, in raise_error
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 50.425489115s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '50s'}]}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestrator.py", line 96, in run
+    self.planner_stage.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestration\planner_stage.py", line 48, in execute
+    planner_result = planner_agent(
+  File "C:\AI_projects\supportsphere-ai\backend\agents\planner.py", line 120, in planner_agent
+    planner_result = structured_llm.invoke(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_core\runnables\base.py", line 3442, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_core\runnables\base.py", line 6004, in invoke
+    return self.bound.invoke(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_google_genai\chat_models.py", line 2754, in invoke
+    return super().invoke(input, config, stop=stop, **kwargs)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_core\language_models\chat_models.py", line 476, in invoke
+    self.generate_prompt(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_core\language_models\chat_models.py", line 1849, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_core\language_models\chat_models.py", line 1656, in generate
+    self._generate_with_cache(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_core\language_models\chat_models.py", line 1994, in _generate_with_cache
+    result = self._generate(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_google_genai\chat_models.py", line 3306, in _generate
+    _handle_client_error(e, request)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_google_genai\chat_models.py", line 177, in _handle_client_error
+    raise ChatGoogleGenerativeAIError(msg) from e
+langchain_google_genai.chat_models.ChatGoogleGenerativeAIError: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 50.425489115s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '50s'}]}}
+2026-07-07 21:09:58 | INFO | ================================================================================
+2026-07-07 21:09:58 | INFO | User Query : where is my order #12345?
+2026-07-07 21:09:58 | INFO | Running Memory Stage...
+2026-07-07 21:09:58 | INFO | No active task.
+2026-07-07 21:09:58 | INFO | Running Planner Agent...
+2026-07-07 21:10:20 | INFO | Intent : ORDER_TRACKING
+2026-07-07 21:10:20 | INFO | Need RAG : False
+2026-07-07 21:10:20 | INFO | Tool : ORDER_TRACKING
+2026-07-07 21:10:20 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-07 21:10:20 | ERROR | Pipeline execution failed.
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestrator.py", line 104, in run
+    self.tool_stage.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestration\tool_stage.py", line 81, in execute
+    self.tool_agent.execute(
+TypeError: ToolAgent.execute() takes 2 positional arguments but 3 were given
+2026-07-08 11:41:35 | INFO | ================================================================================
+2026-07-08 11:41:35 | INFO | User Query : Track my order #12345
+2026-07-08 11:41:35 | INFO | Running Memory Stage...
+2026-07-08 11:41:35 | ERROR | Pipeline execution failed.
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestrator.py", line 88, in run
+    self.memory_stage.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestration\memory_stage.py", line 38, in execute
+    conversation = self.engine.analyze(
+  File "C:\AI_projects\supportsphere-ai\backend\core\conversation\conversation_engine.py", line 125, in analyze
+    context = ConversationContext.from_memory(
+  File "C:\AI_projects\supportsphere-ai\backend\core\conversation\conversation_context.py", line 91, in from_memory
+    memory.entities
+AttributeError: 'WorkingMemory' object has no attribute 'entities'
+2026-07-08 11:46:45 | INFO | ================================================================================
+2026-07-08 11:46:45 | INFO | User Query : Track my order #12345
+2026-07-08 11:46:45 | INFO | Running Memory Stage...
+2026-07-08 11:46:45 | ERROR | Pipeline execution failed.
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestrator.py", line 88, in run
+    self.memory_stage.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestration\memory_stage.py", line 45, in execute
+    conversation = self.engine.analyze(
+  File "C:\AI_projects\supportsphere-ai\backend\core\conversation\conversation_engine.py", line 125, in analyze
+    context = ConversationContext.from_memory(
+  File "C:\AI_projects\supportsphere-ai\backend\core\conversation\conversation_context.py", line 91, in from_memory
+    memory.entities
+AttributeError: 'WorkingMemory' object has no attribute 'entities'
+2026-07-08 11:59:27 | INFO | ================================================================================
+2026-07-08 11:59:27 | INFO | User Query : track order #12345
+2026-07-08 11:59:27 | INFO | Running Memory Stage...
+2026-07-08 11:59:27 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-08 11:59:27 | INFO | Running Planner Agent...
+2026-07-08 11:59:30 | INFO | Intent : ORDER_TRACKING
+2026-07-08 11:59:30 | INFO | Need RAG : False
+2026-07-08 11:59:30 | INFO | Tool : ORDER_TRACKING
+2026-07-08 11:59:30 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 11:59:30 | ERROR | Pipeline execution failed.
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestrator.py", line 104, in run
+    self.tool_stage.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestration\tool_stage.py", line 76, in execute
+    context.tool_result = self.tool_agent.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\agents\tool_agent.py", line 61, in execute
+    result = tool.execute(**parameters)
+TypeError: TrackingTool.execute() got an unexpected keyword argument 'otp'
+2026-07-08 12:04:54 | INFO | ================================================================================
+2026-07-08 12:04:54 | INFO | User Query : track order #12345
+2026-07-08 12:04:54 | INFO | Running Memory Stage...
+2026-07-08 12:04:54 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-08 12:04:54 | INFO | Running Planner Agent...
+2026-07-08 12:04:59 | INFO | Intent : ORDER_TRACKING
+2026-07-08 12:04:59 | INFO | Need RAG : False
+2026-07-08 12:04:59 | INFO | Tool : ORDER_TRACKING
+2026-07-08 12:04:59 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 12:04:59 | INFO | Tool execution completed.
+2026-07-08 12:04:59 | INFO | Retriever skipped (RAG not required).
+2026-07-08 12:04:59 | INFO | Running Response Agent...
+2026-07-08 12:05:36 | ERROR | Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 24.015825455s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '24s'}]}}
+2026-07-08 12:05:36 | ERROR | Pipeline execution failed.
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestrator.py", line 128, in run
+    return self.finalizer.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestration\finalizer.py", line 66, in execute
+    execution_logger.get_execution_steps()
+AttributeError: 'ExecutionLogger' object has no attribute 'get_execution_steps'
+2026-07-08 12:17:03 | INFO | ================================================================================
+2026-07-08 12:17:03 | INFO | User Query : Track my order #12345
+2026-07-08 12:17:03 | INFO | Running Memory Stage...
+2026-07-08 12:17:03 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-08 12:17:03 | INFO | Running Planner Agent...
+2026-07-08 12:17:41 | ERROR | Pipeline execution failed.
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_google_genai\chat_models.py", line 3302, in _generate
+    response: GenerateContentResponse = self.client.models.generate_content(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\models.py", line 6526, in generate_content
+    response = self._generate_content(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\models.py", line 4954, in _generate_content
+    response = self._api_client.request(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\_api_client.py", line 1618, in request
+    response = self._request(http_request, http_options, stream=False)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\_api_client.py", line 1409, in _request
+    return retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+  File "C:\Users\muska\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 438, in result
+    return self.__get_result()
+  File "C:\Users\muska\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 390, in __get_result
+    raise self._exception
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\_api_client.py", line 1388, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\errors.py", line 155, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\google\genai\errors.py", line 184, in raise_error
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18.628263754s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '18s'}]}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestrator.py", line 96, in run
+    self.planner_stage.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestration\planner_stage.py", line 44, in execute
+    planner_result = planner_agent(
+  File "C:\AI_projects\supportsphere-ai\backend\agents\planner.py", line 131, in planner_agent
+    planner_result = structured_llm.invoke(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_core\runnables\base.py", line 3442, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_core\runnables\base.py", line 6004, in invoke
+    return self.bound.invoke(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_google_genai\chat_models.py", line 2754, in invoke
+    return super().invoke(input, config, stop=stop, **kwargs)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_core\language_models\chat_models.py", line 476, in invoke
+    self.generate_prompt(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_core\language_models\chat_models.py", line 1849, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_core\language_models\chat_models.py", line 1656, in generate
+    self._generate_with_cache(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_core\language_models\chat_models.py", line 1994, in _generate_with_cache
+    result = self._generate(
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_google_genai\chat_models.py", line 3306, in _generate
+    _handle_client_error(e, request)
+  File "C:\AI_projects\supportsphere-ai\backend\venv\lib\site-packages\langchain_google_genai\chat_models.py", line 177, in _handle_client_error
+    raise ChatGoogleGenerativeAIError(msg) from e
+langchain_google_genai.chat_models.ChatGoogleGenerativeAIError: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18.628263754s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '18s'}]}}
+2026-07-08 13:11:44 | INFO | ================================================================================
+2026-07-08 13:11:44 | INFO | User Query : Track my order #12345
+2026-07-08 13:11:44 | INFO | Running Memory Stage...
+2026-07-08 13:11:44 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-08 13:11:44 | INFO | Running Planner Agent...
+2026-07-08 13:11:44 | ERROR | Pipeline execution failed.
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestrator.py", line 96, in run
+    self.planner_stage.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestration\planner_stage.py", line 44, in execute
+    planner_result = planner_agent(
+  File "C:\AI_projects\supportsphere-ai\backend\agents\planner.py", line 35, in planner_agent
+    planner_result = DevService.planner(
+NameError: name 'DevService' is not defined
+2026-07-08 13:14:13 | INFO | ================================================================================
+2026-07-08 13:14:13 | INFO | User Query : Track my order #12345
+2026-07-08 13:14:13 | INFO | Running Memory Stage...
+2026-07-08 13:14:13 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-08 13:14:13 | INFO | Running Planner Agent...
+2026-07-08 13:14:13 | INFO | Intent : ORDER_TRACKING
+2026-07-08 13:14:13 | INFO | Need RAG : False
+2026-07-08 13:14:13 | INFO | Tool : ORDER_TRACKING
+2026-07-08 13:14:13 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 13:14:13 | INFO | Tool execution completed.
+2026-07-08 13:14:13 | INFO | Retriever skipped (RAG not required).
+2026-07-08 13:14:13 | INFO | Running Response Agent...
+2026-07-08 13:14:13 | INFO | Response generated.
+2026-07-08 13:27:10 | INFO | ================================================================================
+2026-07-08 13:27:10 | INFO | User Query : track order #12345
+2026-07-08 13:27:10 | INFO | Running Memory Stage...
+2026-07-08 13:27:10 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-08 13:27:10 | INFO | Running Planner Agent...
+2026-07-08 13:27:10 | INFO | Intent : ORDER_TRACKING
+2026-07-08 13:27:10 | INFO | Need RAG : False
+2026-07-08 13:27:10 | INFO | Tool : ORDER_TRACKING
+2026-07-08 13:27:10 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 13:27:10 | INFO | Tool execution completed.
+2026-07-08 13:27:10 | INFO | Retriever skipped (RAG not required).
+2026-07-08 13:27:10 | INFO | Running Response Agent...
+2026-07-08 13:27:10 | INFO | Response generated.
+2026-07-08 13:30:19 | INFO | ================================================================================
+2026-07-08 13:30:19 | INFO | User Query : When will it arrive?
+2026-07-08 13:30:19 | INFO | Running Memory Stage...
+2026-07-08 13:30:19 | INFO | Conversation Decision : FOLLOW_UP
+2026-07-08 13:30:19 | INFO | Follow-up detected.
+2026-07-08 13:30:19 | INFO | Planner skipped by Conversation Engine.
+2026-07-08 13:30:19 | INFO | Executing tool directly from memory.
+2026-07-08 13:30:19 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 13:30:19 | INFO | Tool execution completed.
+2026-07-08 13:30:19 | ERROR | Pipeline execution failed.
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestrator.py", line 112, in run
+    self.retriever_stage.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestration\retriever_stage.py", line 33, in execute
+    raise ValueError(
+ValueError: Planner result is missing.
+2026-07-08 13:35:24 | INFO | ================================================================================
+2026-07-08 13:35:24 | INFO | User Query : Track my order #12345
+2026-07-08 13:35:24 | INFO | Running Memory Stage...
+2026-07-08 13:35:24 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-08 13:35:24 | INFO | Running Planner Agent...
+2026-07-08 13:35:24 | INFO | Intent : ORDER_TRACKING
+2026-07-08 13:35:24 | INFO | Need RAG : False
+2026-07-08 13:35:24 | INFO | Tool : ORDER_TRACKING
+2026-07-08 13:35:24 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 13:35:24 | INFO | Tool execution completed.
+2026-07-08 13:35:24 | INFO | Retriever skipped (RAG not required).
+2026-07-08 13:35:24 | INFO | Running Response Agent...
+2026-07-08 13:35:24 | INFO | Response generated.
+2026-07-08 13:35:50 | INFO | ================================================================================
+2026-07-08 13:35:50 | INFO | User Query : When will it arrive?
+2026-07-08 13:35:50 | INFO | Running Memory Stage...
+2026-07-08 13:35:50 | INFO | Conversation Decision : FOLLOW_UP
+2026-07-08 13:35:50 | INFO | Follow-up detected.
+2026-07-08 13:35:50 | INFO | Planner skipped by Conversation Engine.
+2026-07-08 13:35:50 | INFO | Executing tool directly from memory.
+2026-07-08 13:35:50 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 13:35:50 | INFO | Tool execution completed.
+2026-07-08 13:35:50 | INFO | Planner skipped. Retriever skipped.
+2026-07-08 13:35:50 | INFO | Running Response Agent...
+2026-07-08 13:35:50 | INFO | Response generated.
+2026-07-08 13:38:32 | INFO | ================================================================================
+2026-07-08 13:38:32 | INFO | User Query : Actually I want a refund.
+2026-07-08 13:38:32 | INFO | Running Memory Stage...
+2026-07-08 13:38:32 | INFO | Conversation Decision : PARAMETER_CORRECTION
+2026-07-08 13:38:32 | INFO | Parameter correction.
+2026-07-08 13:38:32 | INFO | Running Planner Agent...
+2026-07-08 13:38:32 | INFO | Intent : REFUND_REQUEST
+2026-07-08 13:38:32 | INFO | Need RAG : False
+2026-07-08 13:38:32 | INFO | Tool : REFUND_REQUEST
+2026-07-08 13:38:32 | INFO | Executing Tool : REFUND_REQUEST
+2026-07-08 13:38:32 | INFO | Tool execution completed.
+2026-07-08 13:38:32 | INFO | Retriever skipped (RAG not required).
+2026-07-08 13:38:32 | INFO | Running Response Agent...
+2026-07-08 13:38:32 | INFO | Response generated.
+2026-07-08 13:41:25 | INFO | ================================================================================
+2026-07-08 13:41:25 | INFO | User Query : Actually track order #67890
+2026-07-08 13:41:25 | INFO | Running Memory Stage...
+2026-07-08 13:41:25 | INFO | Conversation Decision : SLOT_FILLING
+2026-07-08 13:41:25 | INFO | Planner skipped by Conversation Engine.
+2026-07-08 13:41:25 | INFO | Executing tool directly from memory.
+2026-07-08 13:41:25 | INFO | Executing Tool : REFUND_REQUEST
+2026-07-08 13:41:25 | INFO | Tool execution completed.
+2026-07-08 13:41:25 | INFO | Planner skipped. Retriever skipped.
+2026-07-08 13:41:25 | INFO | Running Response Agent...
+2026-07-08 13:41:25 | INFO | Response generated.
+2026-07-08 13:47:19 | INFO | ================================================================================
+2026-07-08 13:47:19 | INFO | User Query : Track my order #12345
+2026-07-08 13:47:19 | INFO | Running Memory Stage...
+2026-07-08 13:47:19 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-08 13:47:19 | INFO | Running Planner Agent...
+2026-07-08 13:47:19 | INFO | Intent : ORDER_TRACKING
+2026-07-08 13:47:19 | INFO | Need RAG : False
+2026-07-08 13:47:19 | INFO | Tool : ORDER_TRACKING
+2026-07-08 13:47:19 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 13:47:19 | INFO | Tool execution completed.
+2026-07-08 13:47:19 | INFO | Retriever skipped (RAG not required).
+2026-07-08 13:47:19 | INFO | Running Response Agent...
+2026-07-08 13:47:19 | INFO | Response generated.
+2026-07-08 13:47:51 | INFO | ================================================================================
+2026-07-08 13:47:51 | INFO | User Query : Actually I want a refund.
+2026-07-08 13:47:51 | INFO | Running Memory Stage...
+2026-07-08 13:47:51 | INFO | Conversation Decision : PARAMETER_CORRECTION
+2026-07-08 13:47:51 | INFO | Parameter correction.
+2026-07-08 13:47:51 | INFO | Running Planner Agent...
+2026-07-08 13:47:51 | INFO | Intent : REFUND_REQUEST
+2026-07-08 13:47:51 | INFO | Need RAG : False
+2026-07-08 13:47:51 | INFO | Tool : REFUND_REQUEST
+2026-07-08 13:47:51 | INFO | Executing Tool : REFUND_REQUEST
+2026-07-08 13:47:51 | INFO | Tool execution completed.
+2026-07-08 13:47:51 | INFO | Retriever skipped (RAG not required).
+2026-07-08 13:47:51 | INFO | Running Response Agent...
+2026-07-08 13:47:51 | INFO | Response generated.
+2026-07-08 13:48:19 | INFO | ================================================================================
+2026-07-08 13:48:19 | INFO | User Query : Actually track order #67890
+2026-07-08 13:48:19 | INFO | Running Memory Stage...
+2026-07-08 13:48:19 | INFO | Conversation Decision : PARAMETER_CORRECTION
+2026-07-08 13:48:19 | INFO | Parameter correction.
+2026-07-08 13:48:19 | INFO | Running Planner Agent...
+2026-07-08 13:48:19 | INFO | Intent : ORDER_TRACKING
+2026-07-08 13:48:19 | INFO | Need RAG : False
+2026-07-08 13:48:19 | INFO | Tool : ORDER_TRACKING
+2026-07-08 13:48:19 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 13:48:19 | INFO | Tool execution completed.
+2026-07-08 13:48:19 | INFO | Retriever skipped (RAG not required).
+2026-07-08 13:48:19 | INFO | Running Response Agent...
+2026-07-08 13:48:19 | INFO | Response generated.
+2026-07-08 16:24:38 | INFO | ================================================================================
+2026-07-08 16:24:38 | INFO | User Query : where is my order #12345?
+2026-07-08 16:24:38 | INFO | Running Memory Stage...
+2026-07-08 16:24:38 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-08 16:24:38 | INFO | Running Planner Agent...
+2026-07-08 16:24:38 | ERROR | Pipeline execution failed.
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestrator.py", line 109, in run
+    self.planner_stage.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestration\planner_stage.py", line 44, in execute
+    planner_result = planner_agent(
+  File "C:\AI_projects\supportsphere-ai\backend\agents\planner.py", line 36, in planner_agent
+    planner_result = DevService.planner(
+  File "C:\AI_projects\supportsphere-ai\backend\dev\dev_service.py", line 145, in planner
+    intent=Intent.GENERAL_QUERY,
+  File "C:\Users\muska\AppData\Local\Programs\Python\Python310\lib\enum.py", line 429, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: GENERAL_QUERY
+2026-07-08 16:25:46 | INFO | ================================================================================
+2026-07-08 16:25:46 | INFO | User Query : track order #12345
+2026-07-08 16:25:46 | INFO | Running Memory Stage...
+2026-07-08 16:25:46 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-08 16:25:46 | INFO | Running Planner Agent...
+2026-07-08 16:25:46 | INFO | Intent : ORDER_TRACKING
+2026-07-08 16:25:46 | INFO | Need RAG : False
+2026-07-08 16:25:46 | INFO | Tool : ORDER_TRACKING
+2026-07-08 16:25:46 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-08 16:25:46 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 16:25:46 | INFO | Tool execution completed.
+2026-07-08 16:25:46 | INFO | Retriever skipped (RAG not required).
+2026-07-08 16:25:46 | INFO | Running Response Agent...
+2026-07-08 16:25:46 | INFO | Response generated.
+2026-07-08 16:26:46 | INFO | ================================================================================
+2026-07-08 16:26:46 | INFO | User Query : actually refund the order
+2026-07-08 16:26:46 | INFO | Running Memory Stage...
+2026-07-08 16:26:46 | INFO | Conversation Decision : PARAMETER_CORRECTION
+2026-07-08 16:26:46 | INFO | Parameter correction.
+2026-07-08 16:26:46 | INFO | Running Planner Agent...
+2026-07-08 16:26:46 | INFO | Intent : REFUND_REQUEST
+2026-07-08 16:26:46 | INFO | Need RAG : False
+2026-07-08 16:26:46 | INFO | Tool : REFUND_REQUEST
+2026-07-08 16:26:46 | INFO | Guardrail Stage: Action Blocked. Confirmation Required
+2026-07-08 16:26:46 | INFO | Tool execution skipped due to missing confirmation.
+2026-07-08 16:26:46 | INFO | Retriever skipped (RAG not required).
+2026-07-08 16:26:46 | INFO | Running Response Agent...
+2026-07-08 16:26:46 | INFO | Response generated.
+2026-07-08 16:33:10 | INFO | ================================================================================
+2026-07-08 16:33:10 | INFO | User Query : track order #12345
+2026-07-08 16:33:10 | INFO | Running Memory Stage...
+2026-07-08 16:33:10 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-08 16:33:10 | INFO | Running Planner Agent...
+2026-07-08 16:33:10 | INFO | Intent : ORDER_TRACKING
+2026-07-08 16:33:10 | INFO | Need RAG : False
+2026-07-08 16:33:10 | INFO | Tool : ORDER_TRACKING
+2026-07-08 16:33:10 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-08 16:33:10 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 16:33:10 | INFO | Tool execution completed.
+2026-07-08 16:33:10 | INFO | Retriever skipped (RAG not required).
+2026-07-08 16:33:10 | INFO | Running Response Agent...
+2026-07-08 16:33:10 | INFO | Response generated.
+2026-07-08 16:33:25 | INFO | ================================================================================
+2026-07-08 16:33:25 | INFO | User Query : can i get a refund?
+2026-07-08 16:33:25 | INFO | Running Memory Stage...
+2026-07-08 16:33:25 | INFO | Conversation Decision : INTENT_SWITCH
+2026-07-08 16:33:25 | INFO | Intent switch.
+2026-07-08 16:33:25 | INFO | Running Planner Agent...
+2026-07-08 16:33:25 | INFO | Intent : REFUND_REQUEST
+2026-07-08 16:33:25 | INFO | Need RAG : False
+2026-07-08 16:33:25 | INFO | Tool : REFUND_REQUEST
+2026-07-08 16:33:25 | INFO | Guardrail Stage: Action Blocked. Confirmation Required
+2026-07-08 16:33:25 | INFO | Tool execution skipped due to missing confirmation.
+2026-07-08 16:33:25 | INFO | Retriever skipped (RAG not required).
+2026-07-08 16:33:25 | INFO | Running Response Agent...
+2026-07-08 16:33:25 | INFO | Response generated.
+2026-07-08 16:33:48 | INFO | ================================================================================
+2026-07-08 16:33:48 | INFO | User Query : give me a refund
+2026-07-08 16:33:48 | INFO | Running Memory Stage...
+2026-07-08 16:33:48 | INFO | Conversation Decision : SLOT_FILLING
+2026-07-08 16:33:48 | INFO | Planner skipped by Conversation Engine.
+2026-07-08 16:33:48 | INFO | Guardrail Stage: Action Blocked. Confirmation Required
+2026-07-08 16:33:48 | INFO | Tool execution skipped due to missing confirmation.
+2026-07-08 16:33:48 | INFO | Planner skipped. Retriever skipped.
+2026-07-08 16:33:48 | INFO | Running Response Agent...
+2026-07-08 16:33:48 | INFO | Response generated.
+2026-07-08 16:38:53 | INFO | ================================================================================
+2026-07-08 16:38:53 | INFO | User Query : track my order #12345
+2026-07-08 16:38:53 | INFO | Running Memory Stage...
+2026-07-08 16:38:53 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-08 16:38:53 | INFO | Running Planner Agent...
+2026-07-08 16:38:53 | INFO | Intent : ORDER_TRACKING
+2026-07-08 16:38:53 | INFO | Need RAG : False
+2026-07-08 16:38:53 | INFO | Tool : ORDER_TRACKING
+2026-07-08 16:38:53 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-08 16:38:53 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 16:38:53 | INFO | Tool execution completed.
+2026-07-08 16:38:53 | INFO | Retriever skipped (RAG not required).
+2026-07-08 16:38:53 | INFO | Running Response Agent...
+2026-07-08 16:38:53 | INFO | Response generated.
+2026-07-08 16:39:05 | INFO | ================================================================================
+2026-07-08 16:39:05 | INFO | User Query : when will it arrive?
+2026-07-08 16:39:05 | INFO | Running Memory Stage...
+2026-07-08 16:39:05 | INFO | Conversation Decision : FOLLOW_UP
+2026-07-08 16:39:05 | INFO | Follow-up detected.
+2026-07-08 16:39:05 | INFO | Planner skipped by Conversation Engine.
+2026-07-08 16:39:05 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-08 16:39:05 | INFO | Executing tool directly from memory.
+2026-07-08 16:39:05 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 16:39:05 | INFO | Tool execution completed.
+2026-07-08 16:39:05 | INFO | Planner skipped. Retriever skipped.
+2026-07-08 16:39:05 | INFO | Running Response Agent...
+2026-07-08 16:39:05 | INFO | Response generated.
+2026-07-08 16:40:05 | INFO | ================================================================================
+2026-07-08 16:40:05 | INFO | User Query : has it already been delivered?
+2026-07-08 16:40:05 | INFO | Running Memory Stage...
+2026-07-08 16:40:05 | INFO | Conversation Decision : FOLLOW_UP
+2026-07-08 16:40:05 | INFO | Follow-up detected.
+2026-07-08 16:40:05 | INFO | Planner skipped by Conversation Engine.
+2026-07-08 16:40:05 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-08 16:40:05 | INFO | Executing tool directly from memory.
+2026-07-08 16:40:05 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 16:40:05 | INFO | Tool execution completed.
+2026-07-08 16:40:05 | INFO | Planner skipped. Retriever skipped.
+2026-07-08 16:40:05 | INFO | Running Response Agent...
+2026-07-08 16:40:05 | INFO | Response generated.
+2026-07-08 16:40:42 | INFO | ================================================================================
+2026-07-08 16:40:42 | INFO | User Query : Actually i want a refund
+2026-07-08 16:40:42 | INFO | Running Memory Stage...
+2026-07-08 16:40:42 | INFO | Conversation Decision : PARAMETER_CORRECTION
+2026-07-08 16:40:42 | INFO | Parameter correction.
+2026-07-08 16:40:42 | INFO | Running Planner Agent...
+2026-07-08 16:40:42 | INFO | Intent : REFUND_REQUEST
+2026-07-08 16:40:42 | INFO | Need RAG : False
+2026-07-08 16:40:42 | INFO | Tool : REFUND_REQUEST
+2026-07-08 16:40:42 | INFO | Guardrail Stage: Action Blocked. Confirmation Required
+2026-07-08 16:40:42 | INFO | Tool execution skipped due to missing confirmation.
+2026-07-08 16:40:42 | INFO | Retriever skipped (RAG not required).
+2026-07-08 16:40:42 | INFO | Running Response Agent...
+2026-07-08 16:40:42 | INFO | Response generated.
+2026-07-08 16:41:47 | INFO | ================================================================================
+2026-07-08 16:41:47 | INFO | User Query : yes
+2026-07-08 16:41:47 | INFO | Running Memory Stage...
+2026-07-08 16:41:47 | INFO | Conversation Decision : SLOT_FILLING
+2026-07-08 16:41:47 | INFO | Planner skipped by Conversation Engine.
+2026-07-08 16:41:47 | INFO | Guardrail Stage: Action Blocked. Confirmation Required
+2026-07-08 16:41:47 | INFO | Tool execution skipped due to missing confirmation.
+2026-07-08 16:41:47 | INFO | Planner skipped. Retriever skipped.
+2026-07-08 16:41:47 | INFO | Running Response Agent...
+2026-07-08 16:41:47 | INFO | Response generated.
+2026-07-08 16:42:18 | INFO | ================================================================================
+2026-07-08 16:42:18 | INFO | User Query : no
+2026-07-08 16:42:18 | INFO | Running Memory Stage...
+2026-07-08 16:42:18 | ERROR | Pipeline execution failed.
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestrator.py", line 101, in run
+    self.memory_stage.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestration\memory_stage.py", line 57, in execute
+    f"Conversation Decision : {conversation.decision.value}"
+AttributeError: 'NoneType' object has no attribute 'decision'
+2026-07-08 16:42:46 | INFO | ================================================================================
+2026-07-08 16:42:46 | INFO | User Query : Track order #12345
+2026-07-08 16:42:46 | INFO | Running Memory Stage...
+2026-07-08 16:42:46 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-08 16:42:46 | INFO | Running Planner Agent...
+2026-07-08 16:42:46 | INFO | Intent : ORDER_TRACKING
+2026-07-08 16:42:46 | INFO | Need RAG : False
+2026-07-08 16:42:46 | INFO | Tool : ORDER_TRACKING
+2026-07-08 16:42:46 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-08 16:42:46 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 16:42:46 | INFO | Tool execution completed.
+2026-07-08 16:42:46 | INFO | Retriever skipped (RAG not required).
+2026-07-08 16:42:46 | INFO | Running Response Agent...
+2026-07-08 16:42:46 | INFO | Response generated.
+2026-07-08 16:42:55 | INFO | ================================================================================
+2026-07-08 16:42:55 | INFO | User Query : Refund it
+2026-07-08 16:42:55 | INFO | Running Memory Stage...
+2026-07-08 16:42:55 | INFO | Conversation Decision : INTENT_SWITCH
+2026-07-08 16:42:55 | INFO | Intent switch.
+2026-07-08 16:42:55 | INFO | Running Planner Agent...
+2026-07-08 16:42:55 | INFO | Intent : REFUND_REQUEST
+2026-07-08 16:42:55 | INFO | Need RAG : False
+2026-07-08 16:42:55 | INFO | Tool : REFUND_REQUEST
+2026-07-08 16:42:55 | INFO | Guardrail Stage: Action Blocked. Confirmation Required
+2026-07-08 16:42:55 | INFO | Tool execution skipped due to missing confirmation.
+2026-07-08 16:42:55 | INFO | Retriever skipped (RAG not required).
+2026-07-08 16:42:55 | INFO | Running Response Agent...
+2026-07-08 16:42:55 | INFO | Response generated.
+2026-07-08 16:43:39 | INFO | ================================================================================
+2026-07-08 16:43:39 | INFO | User Query : Reset my password
+2026-07-08 16:43:39 | INFO | Running Memory Stage...
+2026-07-08 16:43:39 | INFO | Conversation Decision : INTENT_SWITCH
+2026-07-08 16:43:39 | INFO | Intent switch.
+2026-07-08 16:43:39 | INFO | Running Planner Agent...
+2026-07-08 16:43:39 | INFO | Intent : PASSWORD_RESET
+2026-07-08 16:43:39 | INFO | Need RAG : False
+2026-07-08 16:43:39 | INFO | Tool : PASSWORD_RESET
+2026-07-08 16:43:39 | INFO | Guardrail Stage: Action Blocked. Confirmation Required
+2026-07-08 16:43:39 | INFO | Tool execution skipped due to missing confirmation.
+2026-07-08 16:43:39 | INFO | Retriever skipped (RAG not required).
+2026-07-08 16:43:39 | INFO | Running Response Agent...
+2026-07-08 16:43:39 | INFO | Response generated.
+2026-07-08 16:44:47 | INFO | ================================================================================
+2026-07-08 16:44:47 | INFO | User Query : Delete my account
+2026-07-08 16:44:47 | INFO | Running Memory Stage...
+2026-07-08 16:44:47 | INFO | Conversation Decision : SLOT_FILLING
+2026-07-08 16:44:47 | INFO | Planner skipped by Conversation Engine.
+2026-07-08 16:44:47 | INFO | Guardrail Stage: Action Blocked. Confirmation Required
+2026-07-08 16:44:47 | INFO | Tool execution skipped due to missing confirmation.
+2026-07-08 16:44:47 | INFO | Planner skipped. Retriever skipped.
+2026-07-08 16:44:47 | INFO | Running Response Agent...
+2026-07-08 16:44:47 | INFO | Response generated.
+2026-07-08 21:11:06 | INFO | ================================================================================
+2026-07-08 21:11:06 | INFO | User Query : Track order #12345
+2026-07-08 21:11:06 | INFO | Running Memory Stage...
+2026-07-08 21:11:06 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-08 21:11:06 | INFO | Running Planner Agent...
+2026-07-08 21:11:06 | INFO | Intent : ORDER_TRACKING
+2026-07-08 21:11:06 | INFO | Need RAG : False
+2026-07-08 21:11:06 | INFO | Tool : ORDER_TRACKING
+2026-07-08 21:11:06 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-08 21:11:06 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 21:11:06 | INFO | Tool execution completed.
+2026-07-08 21:11:06 | INFO | Retriever skipped (RAG not required).
+2026-07-08 21:11:06 | INFO | Running Response Agent...
+2026-07-08 21:11:06 | INFO | Response generated.
+2026-07-08 21:11:34 | INFO | ================================================================================
+2026-07-08 21:11:34 | INFO | User Query : When will it arrive?
+2026-07-08 21:11:34 | INFO | Running Memory Stage...
+2026-07-08 21:11:34 | INFO | Conversation Decision : FOLLOW_UP
+2026-07-08 21:11:34 | INFO | Follow-up detected.
+2026-07-08 21:11:34 | INFO | Planner skipped by Conversation Engine.
+2026-07-08 21:11:34 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-08 21:11:34 | INFO | Executing tool directly from memory.
+2026-07-08 21:11:34 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 21:11:34 | INFO | Tool execution completed.
+2026-07-08 21:11:34 | INFO | Planner skipped. Retriever skipped.
+2026-07-08 21:11:34 | INFO | Running Response Agent...
+2026-07-08 21:11:34 | INFO | Response generated.
+2026-07-08 21:12:23 | INFO | ================================================================================
+2026-07-08 21:12:23 | INFO | User Query : Actually I want a refund.
+2026-07-08 21:12:23 | INFO | Running Memory Stage...
+2026-07-08 21:12:23 | INFO | Conversation Decision : PARAMETER_CORRECTION
+2026-07-08 21:12:23 | INFO | Parameter correction.
+2026-07-08 21:12:23 | INFO | Running Planner Agent...
+2026-07-08 21:12:23 | INFO | Intent : REFUND_REQUEST
+2026-07-08 21:12:23 | INFO | Need RAG : False
+2026-07-08 21:12:23 | INFO | Tool : REFUND_REQUEST
+2026-07-08 21:12:23 | INFO | Guardrail Stage: Action Blocked. Confirmation Required
+2026-07-08 21:12:23 | INFO | Tool execution skipped due to missing confirmation.
+2026-07-08 21:12:23 | INFO | Retriever skipped (RAG not required).
+2026-07-08 21:12:23 | INFO | Running Response Agent...
+2026-07-08 21:12:23 | INFO | Response generated.
+2026-07-08 21:15:26 | INFO | ================================================================================
+2026-07-08 21:15:26 | INFO | User Query : Track order 12345
+2026-07-08 21:15:26 | INFO | Running Memory Stage...
+2026-07-08 21:15:26 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-08 21:15:26 | INFO | Running Planner Agent...
+2026-07-08 21:15:26 | INFO | Intent : ORDER_TRACKING
+2026-07-08 21:15:26 | INFO | Need RAG : False
+2026-07-08 21:15:26 | INFO | Tool : ORDER_TRACKING
+2026-07-08 21:15:26 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-08 21:15:26 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 21:15:26 | INFO | Tool execution completed.
+2026-07-08 21:15:26 | INFO | Retriever skipped (RAG not required).
+2026-07-08 21:15:26 | INFO | Running Response Agent...
+2026-07-08 21:15:26 | INFO | Response generated.
+2026-07-08 21:15:49 | INFO | ================================================================================
+2026-07-08 21:15:49 | INFO | User Query : Actually I want a refund.
+2026-07-08 21:15:49 | INFO | Running Memory Stage...
+2026-07-08 21:15:49 | INFO | Conversation Decision : PARAMETER_CORRECTION
+2026-07-08 21:15:49 | INFO | Parameter correction.
+2026-07-08 21:15:49 | INFO | Running Planner Agent...
+2026-07-08 21:15:49 | INFO | Intent : REFUND_REQUEST
+2026-07-08 21:15:49 | INFO | Need RAG : False
+2026-07-08 21:15:49 | INFO | Tool : REFUND_REQUEST
+2026-07-08 21:15:49 | INFO | Guardrail Stage: Action Blocked. Confirmation Required
+2026-07-08 21:15:49 | INFO | Tool execution skipped due to missing confirmation.
+2026-07-08 21:15:49 | INFO | Retriever skipped (RAG not required).
+2026-07-08 21:15:49 | INFO | Running Response Agent...
+2026-07-08 21:15:49 | INFO | Response generated.
+2026-07-08 21:19:40 | INFO | ================================================================================
+2026-07-08 21:19:40 | INFO | User Query : Track order #12345
+2026-07-08 21:19:40 | INFO | Running Memory Stage...
+2026-07-08 21:19:40 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-08 21:19:40 | INFO | Running Planner Agent...
+2026-07-08 21:19:40 | INFO | Intent : ORDER_TRACKING
+2026-07-08 21:19:40 | INFO | Need RAG : False
+2026-07-08 21:19:40 | INFO | Tool : ORDER_TRACKING
+2026-07-08 21:19:40 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-08 21:19:40 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 21:19:40 | INFO | Tool execution completed.
+2026-07-08 21:19:40 | INFO | Retriever skipped (RAG not required).
+2026-07-08 21:19:40 | INFO | Running Response Agent...
+2026-07-08 21:19:40 | INFO | Response generated.
+2026-07-08 21:19:51 | INFO | ================================================================================
+2026-07-08 21:19:51 | INFO | User Query : Actually I want a refund.
+2026-07-08 21:19:51 | INFO | Running Memory Stage...
+2026-07-08 21:19:51 | INFO | Conversation Decision : INTENT_SWITCH
+2026-07-08 21:19:51 | INFO | Intent switch.
+2026-07-08 21:19:51 | INFO | Running Planner Agent...
+2026-07-08 21:19:51 | INFO | Intent : REFUND_REQUEST
+2026-07-08 21:19:51 | INFO | Need RAG : False
+2026-07-08 21:19:51 | INFO | Tool : REFUND_REQUEST
+2026-07-08 21:19:51 | INFO | Guardrail Stage: Action Blocked. Confirmation Required
+2026-07-08 21:19:51 | INFO | Tool execution skipped due to missing confirmation.
+2026-07-08 21:19:51 | INFO | Retriever skipped (RAG not required).
+2026-07-08 21:19:51 | INFO | Running Response Agent...
+2026-07-08 21:19:51 | INFO | Response generated.
+2026-07-08 21:57:49 | INFO | ================================================================================
+2026-07-08 21:57:49 | INFO | User Query : where  is my order #12345?
+2026-07-08 21:57:49 | INFO | Running Memory Stage...
+2026-07-08 21:57:49 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-08 21:57:49 | INFO | Running Planner Agent...
+2026-07-08 21:57:49 | ERROR | Pipeline execution failed.
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestrator.py", line 109, in run
+    self.planner_stage.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestration\planner_stage.py", line 44, in execute
+    planner_result = planner_agent(
+  File "C:\AI_projects\supportsphere-ai\backend\agents\planner.py", line 36, in planner_agent
+    planner_result = DevService.planner(
+  File "C:\AI_projects\supportsphere-ai\backend\dev\dev_service.py", line 145, in planner
+    intent=Intent.GENERAL_QUERY,
+  File "C:\Users\muska\AppData\Local\Programs\Python\Python310\lib\enum.py", line 429, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: GENERAL_QUERY
+2026-07-08 21:58:14 | INFO | ================================================================================
+2026-07-08 21:58:14 | INFO | User Query : track order #12345
+2026-07-08 21:58:14 | INFO | Running Memory Stage...
+2026-07-08 21:58:14 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-08 21:58:14 | INFO | Running Planner Agent...
+2026-07-08 21:58:14 | INFO | Intent : ORDER_TRACKING
+2026-07-08 21:58:14 | INFO | Need RAG : False
+2026-07-08 21:58:14 | INFO | Tool : ORDER_TRACKING
+2026-07-08 21:58:14 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-08 21:58:14 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 21:58:14 | INFO | Tool execution completed.
+2026-07-08 21:58:14 | INFO | Retriever skipped (RAG not required).
+2026-07-08 21:58:14 | INFO | Running Response Agent...
+2026-07-08 21:58:14 | INFO | Response generated.
+2026-07-08 21:58:35 | INFO | ================================================================================
+2026-07-08 21:58:35 | INFO | User Query : When will it arrive?
+2026-07-08 21:58:35 | INFO | Running Memory Stage...
+2026-07-08 21:58:35 | INFO | Conversation Decision : FOLLOW_UP
+2026-07-08 21:58:35 | INFO | Follow-up detected.
+2026-07-08 21:58:35 | INFO | Planner skipped by Conversation Engine.
+2026-07-08 21:58:35 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-08 21:58:35 | INFO | Executing active tool from memory.
+2026-07-08 21:58:35 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-08 21:58:35 | INFO | Tool execution completed.
+2026-07-08 21:58:35 | INFO | Planner skipped. Retriever skipped.
+2026-07-08 21:58:35 | INFO | Running Response Agent...
+2026-07-08 21:58:35 | INFO | Response generated.
+2026-07-08 21:59:04 | INFO | ================================================================================
+2026-07-08 21:59:04 | INFO | User Query : Actually I want a refund.
+2026-07-08 21:59:04 | INFO | Running Memory Stage...
+2026-07-08 21:59:04 | INFO | Conversation Decision : INTENT_SWITCH
+2026-07-08 21:59:04 | INFO | Intent switch.
+2026-07-08 21:59:04 | INFO | Running Planner Agent...
+2026-07-08 21:59:04 | INFO | Intent : REFUND_REQUEST
+2026-07-08 21:59:04 | INFO | Need RAG : False
+2026-07-08 21:59:04 | INFO | Tool : REFUND_REQUEST
+2026-07-08 21:59:04 | INFO | Guardrail Stage: Action Blocked. Confirmation Required
+2026-07-08 21:59:04 | INFO | Tool execution skipped due to missing confirmation.
+2026-07-08 21:59:04 | INFO | Retriever skipped (RAG not required).
+2026-07-08 21:59:04 | INFO | Running Response Agent...
+2026-07-08 21:59:04 | INFO | Response generated.
+2026-07-09 11:11:21 | INFO | ================================================================================
+2026-07-09 11:11:21 | INFO | User Query : Track order #12345
+2026-07-09 11:11:21 | INFO | Running Memory Stage...
+2026-07-09 11:11:21 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-09 11:11:21 | INFO | Running Planner Agent...
+2026-07-09 11:11:21 | INFO | Intent : ORDER_TRACKING
+2026-07-09 11:11:21 | INFO | Need RAG : False
+2026-07-09 11:11:21 | INFO | Tool : ORDER_TRACKING
+2026-07-09 11:11:21 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-09 11:11:21 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-09 11:11:21 | INFO | Tool execution completed.
+2026-07-09 11:11:21 | INFO | Retriever skipped (RAG not required).
+2026-07-09 11:11:21 | INFO | Running Response Agent...
+2026-07-09 11:11:21 | INFO | Response generated.
+2026-07-09 11:11:21 | ERROR | Pipeline execution failed.
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestrator.py", line 157, in run
+    return self.finalizer.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestration\finalizer.py", line 97, in execute
+    "average_similarity": context.average_similarity,
+AttributeError: 'PipelineContext' object has no attribute 'average_similarity'
+2026-07-09 11:14:21 | INFO | ================================================================================
+2026-07-09 11:14:21 | INFO | User Query : tracl order #12345
+2026-07-09 11:14:21 | INFO | Running Memory Stage...
+2026-07-09 11:14:21 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-09 11:14:21 | INFO | Running Planner Agent...
+2026-07-09 11:14:21 | ERROR | Pipeline execution failed.
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestrator.py", line 109, in run
+    self.planner_stage.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestration\planner_stage.py", line 44, in execute
+    planner_result = planner_agent(
+  File "C:\AI_projects\supportsphere-ai\backend\agents\planner.py", line 36, in planner_agent
+    planner_result = DevService.planner(
+  File "C:\AI_projects\supportsphere-ai\backend\dev\dev_service.py", line 100, in planner
+    intent=Intent.GENERAL_QUERY,
+  File "C:\Users\muska\AppData\Local\Programs\Python\Python310\lib\enum.py", line 429, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: GENERAL_QUERY
+2026-07-09 11:14:29 | INFO | ================================================================================
+2026-07-09 11:14:29 | INFO | User Query : Track order #12345
+2026-07-09 11:14:29 | INFO | Running Memory Stage...
+2026-07-09 11:14:29 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-09 11:14:29 | INFO | Running Planner Agent...
+2026-07-09 11:14:29 | INFO | Intent : ORDER_TRACKING
+2026-07-09 11:14:29 | INFO | Need RAG : False
+2026-07-09 11:14:29 | INFO | Tool : ORDER_TRACKING
+2026-07-09 11:14:29 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-09 11:14:29 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-09 11:14:29 | INFO | Tool execution completed.
+2026-07-09 11:14:29 | INFO | Retriever skipped (RAG not required).
+2026-07-09 11:14:29 | INFO | Running Response Agent...
+2026-07-09 11:14:29 | INFO | Response generated.
+2026-07-09 11:16:56 | INFO | ================================================================================
+2026-07-09 11:16:56 | INFO | User Query : Track order #12345
+2026-07-09 11:16:56 | INFO | Running Memory Stage...
+2026-07-09 11:16:56 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-09 11:16:56 | INFO | Running Planner Agent...
+2026-07-09 11:16:56 | INFO | Intent : ORDER_TRACKING
+2026-07-09 11:16:56 | INFO | Need RAG : False
+2026-07-09 11:16:56 | INFO | Tool : ORDER_TRACKING
+2026-07-09 11:16:56 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-09 11:16:56 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-09 11:16:56 | INFO | Tool execution completed.
+2026-07-09 11:16:56 | INFO | Retriever skipped (RAG not required).
+2026-07-09 11:16:56 | INFO | Running Response Agent...
+2026-07-09 11:16:56 | INFO | Response generated.
+2026-07-09 11:19:14 | INFO | ================================================================================
+2026-07-09 11:19:14 | INFO | User Query : Track order #12345
+2026-07-09 11:19:14 | INFO | Running Memory Stage...
+2026-07-09 11:19:14 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-09 11:19:14 | INFO | Running Planner Agent...
+2026-07-09 11:19:14 | INFO | Intent : ORDER_TRACKING
+2026-07-09 11:19:14 | INFO | Need RAG : False
+2026-07-09 11:19:14 | INFO | Tool : ORDER_TRACKING
+2026-07-09 11:19:14 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-09 11:19:14 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-09 11:19:14 | INFO | Tool execution completed.
+2026-07-09 11:19:14 | INFO | Retriever skipped (RAG not required).
+2026-07-09 11:19:14 | INFO | Running Response Agent...
+2026-07-09 11:19:14 | INFO | Response generated.
+2026-07-09 11:25:35 | INFO | ================================================================================
+2026-07-09 11:25:35 | INFO | User Query : Track  order #12345
+2026-07-09 11:25:35 | INFO | Running Memory Stage...
+2026-07-09 11:25:35 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-09 11:25:35 | INFO | Running Planner Agent...
+2026-07-09 11:25:35 | INFO | Intent : ORDER_TRACKING
+2026-07-09 11:25:35 | INFO | Need RAG : False
+2026-07-09 11:25:35 | INFO | Tool : ORDER_TRACKING
+2026-07-09 11:25:35 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-09 11:25:35 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-09 11:25:35 | INFO | Tool execution completed.
+2026-07-09 11:25:35 | INFO | Retriever skipped (RAG not required).
+2026-07-09 11:25:35 | INFO | Running Response Agent...
+2026-07-09 11:25:35 | INFO | Response generated.
+2026-07-09 11:28:25 | INFO | ================================================================================
+2026-07-09 11:28:25 | INFO | User Query : track order #12345
+2026-07-09 11:28:25 | INFO | Running Memory Stage...
+2026-07-09 11:28:25 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-09 11:28:25 | INFO | Running Planner Agent...
+2026-07-09 11:28:25 | INFO | Intent : ORDER_TRACKING
+2026-07-09 11:28:25 | INFO | Need RAG : False
+2026-07-09 11:28:25 | INFO | Tool : ORDER_TRACKING
+2026-07-09 11:28:25 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-09 11:28:25 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-09 11:28:25 | INFO | Tool execution completed.
+2026-07-09 11:28:25 | INFO | Retriever skipped (RAG not required).
+2026-07-09 11:28:25 | INFO | Running Response Agent...
+2026-07-09 11:28:25 | INFO | Response generated.
+2026-07-09 11:29:09 | INFO | ================================================================================
+2026-07-09 11:29:09 | INFO | User Query : track order #12345
+2026-07-09 11:29:09 | INFO | Running Memory Stage...
+2026-07-09 11:29:09 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-09 11:29:09 | INFO | Running Planner Agent...
+2026-07-09 11:29:09 | INFO | Intent : ORDER_TRACKING
+2026-07-09 11:29:09 | INFO | Need RAG : False
+2026-07-09 11:29:09 | INFO | Tool : ORDER_TRACKING
+2026-07-09 11:29:09 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-09 11:29:09 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-09 11:29:09 | INFO | Tool execution completed.
+2026-07-09 11:29:09 | INFO | Retriever skipped (RAG not required).
+2026-07-09 11:29:09 | INFO | Running Response Agent...
+2026-07-09 11:29:09 | INFO | Response generated.
+2026-07-09 11:29:36 | INFO | ================================================================================
+2026-07-09 11:29:36 | INFO | User Query : track order #12345
+2026-07-09 11:29:36 | INFO | Running Memory Stage...
+2026-07-09 11:29:36 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-09 11:29:36 | INFO | Running Planner Agent...
+2026-07-09 11:29:36 | INFO | Intent : ORDER_TRACKING
+2026-07-09 11:29:36 | INFO | Need RAG : False
+2026-07-09 11:29:36 | INFO | Tool : ORDER_TRACKING
+2026-07-09 11:29:36 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-09 11:29:36 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-09 11:29:36 | INFO | Tool execution completed.
+2026-07-09 11:29:36 | INFO | Retriever skipped (RAG not required).
+2026-07-09 11:29:36 | INFO | Running Response Agent...
+2026-07-09 11:29:36 | INFO | Response generated.
+2026-07-09 12:12:03 | INFO | ================================================================================
+2026-07-09 12:12:03 | INFO | User Query : Track order #12345
+2026-07-09 12:12:03 | INFO | Running Memory Stage...
+2026-07-09 12:12:03 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-09 12:12:03 | INFO | Running Planner Agent...
+2026-07-09 12:12:03 | INFO | Intent : ORDER_TRACKING
+2026-07-09 12:12:03 | INFO | Need RAG : False
+2026-07-09 12:12:03 | INFO | Tool : ORDER_TRACKING
+2026-07-09 12:12:03 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-09 12:12:03 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-09 12:12:03 | INFO | Tool execution completed.
+2026-07-09 12:12:03 | INFO | Retriever skipped (RAG not required).
+2026-07-09 12:12:03 | INFO | Running Response Agent...
+2026-07-09 12:12:03 | INFO | Response generated.
+2026-07-09 12:40:40 | INFO | ================================================================================
+2026-07-09 12:40:40 | INFO | User Query : Track order #12345.
+2026-07-09 12:40:40 | INFO | Running Memory Stage...
+2026-07-09 12:40:40 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-09 12:40:40 | INFO | Running Planner Agent...
+2026-07-09 12:40:40 | INFO | Intent : ORDER_TRACKING
+2026-07-09 12:40:40 | INFO | Need RAG : False
+2026-07-09 12:40:40 | INFO | Tool : ORDER_TRACKING
+2026-07-09 12:40:40 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-09 12:40:40 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-09 12:40:40 | INFO | Tool execution completed.
+2026-07-09 12:40:40 | INFO | Retriever skipped (RAG not required).
+2026-07-09 12:40:40 | INFO | Running Response Agent...
+2026-07-09 12:40:40 | INFO | Response generated.
+2026-07-09 12:41:36 | INFO | ================================================================================
+2026-07-09 12:41:36 | INFO | User Query : i want a refund
+2026-07-09 12:41:36 | INFO | Running Memory Stage...
+2026-07-09 12:41:36 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-09 12:41:36 | INFO | Running Planner Agent...
+2026-07-09 12:41:36 | INFO | Intent : REFUND_REQUEST
+2026-07-09 12:41:36 | INFO | Need RAG : False
+2026-07-09 12:41:36 | INFO | Tool : REFUND_REQUEST
+2026-07-09 12:41:36 | INFO | Guardrail Stage: Action Blocked. Confirmation Required
+2026-07-09 12:41:36 | INFO | Tool execution skipped due to missing confirmation.
+2026-07-09 12:41:36 | INFO | Retriever skipped (RAG not required).
+2026-07-09 12:41:36 | INFO | Running Response Agent...
+2026-07-09 12:41:36 | INFO | Response generated.
+2026-07-09 12:42:16 | INFO | ================================================================================
+2026-07-09 12:42:16 | INFO | User Query : the product was damaged
+2026-07-09 12:42:16 | INFO | Running Memory Stage...
+2026-07-09 12:42:16 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-09 12:42:16 | INFO | Running Planner Agent...
+2026-07-09 12:42:16 | ERROR | Pipeline execution failed.
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestrator.py", line 109, in run
+    self.planner_stage.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestration\planner_stage.py", line 44, in execute
+    planner_result = planner_agent(
+  File "C:\AI_projects\supportsphere-ai\backend\agents\planner.py", line 36, in planner_agent
+    planner_result = DevService.planner(
+  File "C:\AI_projects\supportsphere-ai\backend\dev\dev_service.py", line 100, in planner
+    intent=Intent.GENERAL_QUERY,
+  File "C:\Users\muska\AppData\Local\Programs\Python\Python310\lib\enum.py", line 429, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: GENERAL_QUERY
+2026-07-09 12:42:47 | INFO | ================================================================================
+2026-07-09 12:42:47 | INFO | User Query : i forgot my password
+2026-07-09 12:42:47 | INFO | Running Memory Stage...
+2026-07-09 12:42:47 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-09 12:42:47 | INFO | Running Planner Agent...
+2026-07-09 12:42:47 | INFO | Intent : PASSWORD_RESET
+2026-07-09 12:42:47 | INFO | Need RAG : False
+2026-07-09 12:42:47 | INFO | Tool : PASSWORD_RESET
+2026-07-09 12:42:47 | INFO | Guardrail Stage: Action Blocked. Confirmation Required
+2026-07-09 12:42:47 | INFO | Tool execution skipped due to missing confirmation.
+2026-07-09 12:42:47 | INFO | Retriever skipped (RAG not required).
+2026-07-09 12:42:47 | INFO | Running Response Agent...
+2026-07-09 12:42:47 | INFO | Response generated.
+2026-07-09 12:43:45 | INFO | ================================================================================
+2026-07-09 12:43:45 | INFO | User Query : what is your refund policy
+2026-07-09 12:43:45 | INFO | Running Memory Stage...
+2026-07-09 12:43:45 | INFO | Conversation Decision : INTENT_SWITCH
+2026-07-09 12:43:45 | INFO | Intent switch.
+2026-07-09 12:43:45 | INFO | Running Planner Agent...
+2026-07-09 12:43:45 | INFO | Intent : REFUND_REQUEST
+2026-07-09 12:43:45 | INFO | Need RAG : False
+2026-07-09 12:43:45 | INFO | Tool : REFUND_REQUEST
+2026-07-09 12:43:45 | INFO | Guardrail Stage: Action Blocked. Confirmation Required
+2026-07-09 12:43:45 | INFO | Tool execution skipped due to missing confirmation.
+2026-07-09 12:43:45 | INFO | Retriever skipped (RAG not required).
+2026-07-09 12:43:45 | INFO | Running Response Agent...
+2026-07-09 12:43:45 | INFO | Response generated.
+2026-07-09 12:44:08 | INFO | ================================================================================
+2026-07-09 12:44:08 | INFO | User Query : I want to request a refund.
+2026-07-09 12:44:08 | INFO | Running Memory Stage...
+2026-07-09 12:44:08 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-09 12:44:08 | INFO | Running Planner Agent...
+2026-07-09 12:44:08 | INFO | Intent : REFUND_REQUEST
+2026-07-09 12:44:08 | INFO | Need RAG : False
+2026-07-09 12:44:08 | INFO | Tool : REFUND_REQUEST
+2026-07-09 12:44:08 | INFO | Guardrail Stage: Action Blocked. Confirmation Required
+2026-07-09 12:44:08 | INFO | Tool execution skipped due to missing confirmation.
+2026-07-09 12:44:08 | INFO | Retriever skipped (RAG not required).
+2026-07-09 12:44:08 | INFO | Running Response Agent...
+2026-07-09 12:44:08 | INFO | Response generated.
+2026-07-09 12:44:12 | INFO | ================================================================================
+2026-07-09 12:44:12 | INFO | User Query : What is the shipping status of my order?
+2026-07-09 12:44:12 | INFO | Running Memory Stage...
+2026-07-09 12:44:12 | INFO | Conversation Decision : INTENT_SWITCH
+2026-07-09 12:44:12 | INFO | Intent switch.
+2026-07-09 12:44:12 | INFO | Running Planner Agent...
+2026-07-09 12:44:12 | ERROR | Pipeline execution failed.
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestrator.py", line 109, in run
+    self.planner_stage.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestration\planner_stage.py", line 44, in execute
+    planner_result = planner_agent(
+  File "C:\AI_projects\supportsphere-ai\backend\agents\planner.py", line 36, in planner_agent
+    planner_result = DevService.planner(
+  File "C:\AI_projects\supportsphere-ai\backend\dev\dev_service.py", line 100, in planner
+    intent=Intent.GENERAL_QUERY,
+  File "C:\Users\muska\AppData\Local\Programs\Python\Python310\lib\enum.py", line 429, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: GENERAL_QUERY
+2026-07-09 14:18:10 | INFO | ================================================================================
+2026-07-09 14:18:10 | INFO | User Query : Track my order
+2026-07-09 14:18:10 | INFO | Conversation Memory : ENABLED
+2026-07-09 14:18:10 | INFO | Running Memory Stage...
+2026-07-09 14:18:10 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-09 14:18:10 | INFO | Running Planner Agent...
+2026-07-09 14:18:10 | INFO | Intent : ORDER_TRACKING
+2026-07-09 14:18:10 | INFO | Need RAG : False
+2026-07-09 14:18:10 | INFO | Tool : ORDER_TRACKING
+2026-07-09 14:18:10 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-09 14:18:10 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-09 14:18:10 | ERROR | Pipeline execution failed.
+Traceback (most recent call last):
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestrator.py", line 169, in run
+    self.tool_stage.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\core\orchestration\tool_stage.py", line 114, in execute
+    context.tool_result = self.tool_agent.execute(
+  File "C:\AI_projects\supportsphere-ai\backend\agents\tool_agent.py", line 86, in execute
+    result = tool.execute(
+TypeError: TrackingTool.execute() missing 1 required positional argument: 'order_id'
+2026-07-09 14:18:18 | INFO | ================================================================================
+2026-07-09 14:18:18 | INFO | User Query : track order #12345
+2026-07-09 14:18:18 | INFO | Conversation Memory : ENABLED
+2026-07-09 14:18:18 | INFO | Running Memory Stage...
+2026-07-09 14:18:18 | INFO | Conversation Decision : SLOT_FILLING
+2026-07-09 14:18:18 | INFO | Planner skipped by Conversation Engine.
+2026-07-09 14:18:18 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-09 14:18:18 | INFO | Executing active tool from memory.
+2026-07-09 14:18:18 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-09 14:18:18 | INFO | Tool execution completed.
+2026-07-09 14:18:18 | INFO | Planner skipped. Retriever skipped.
+2026-07-09 14:18:18 | INFO | Running Response Agent...
+2026-07-09 14:18:18 | INFO | Response generated.
+2026-07-09 14:26:37 | INFO | ================================================================================
+2026-07-09 14:26:37 | INFO | User Query : Track my order #12345
+2026-07-09 14:26:37 | INFO | Conversation Memory : ENABLED
+2026-07-09 14:26:37 | INFO | Running Memory Stage...
+2026-07-09 14:26:37 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-09 14:26:37 | INFO | Running Planner Agent...
+2026-07-09 14:26:37 | INFO | Intent : ORDER_TRACKING
+2026-07-09 14:26:37 | INFO | Need RAG : False
+2026-07-09 14:26:37 | INFO | Tool : ORDER_TRACKING
+2026-07-09 14:26:37 | INFO | Guardrail Stage: Safe Action Passed
+2026-07-09 14:26:37 | INFO | Executing Tool : ORDER_TRACKING
+2026-07-09 14:26:37 | INFO | Tool execution completed.
+2026-07-09 14:26:37 | INFO | Retriever skipped (RAG not required).
+2026-07-09 14:26:37 | INFO | Running Response Agent...
+2026-07-09 14:26:37 | INFO | Response generated.
+2026-07-09 14:28:01 | INFO | ================================================================================
+2026-07-09 14:28:01 | INFO | User Query : What is your refund policy
+2026-07-09 14:28:01 | INFO | Conversation Memory : ENABLED
+2026-07-09 14:28:01 | INFO | Running Memory Stage...
+2026-07-09 14:28:01 | INFO | Conversation Decision : INTENT_SWITCH
+2026-07-09 14:28:01 | INFO | Intent switch.
+2026-07-09 14:28:01 | INFO | Running Planner Agent...
+2026-07-09 14:28:01 | INFO | Intent : REFUND_REQUEST
+2026-07-09 14:28:01 | INFO | Need RAG : False
+2026-07-09 14:28:01 | INFO | Tool : REFUND_REQUEST
+2026-07-09 14:28:01 | INFO | Guardrail Stage: Action Blocked. Confirmation Required
+2026-07-09 14:28:01 | INFO | Tool execution skipped due to missing confirmation.
+2026-07-09 14:28:01 | INFO | Retriever skipped (RAG not required).
+2026-07-09 14:28:01 | INFO | Running Response Agent...
+2026-07-09 14:28:01 | INFO | Response generated.
+2026-07-09 14:50:42 | INFO | ================================================================================
+2026-07-09 14:50:42 | INFO | User Query : What is your refund policy?
+2026-07-09 14:50:42 | INFO | Conversation Memory : ENABLED
+2026-07-09 14:50:42 | INFO | Running Memory Stage...
+2026-07-09 14:50:42 | INFO | Conversation Decision : RUN_PLANNER
+2026-07-09 14:50:42 | INFO | Running Planner Agent...
+2026-07-09 14:50:42 | INFO | Intent : REFUND_REQUEST
+2026-07-09 14:50:42 | INFO | Need RAG : False
+2026-07-09 14:50:42 | INFO | Tool : REFUND_REQUEST
+2026-07-09 14:50:42 | INFO | Guardrail Stage: Action Blocked. Confirmation Required
+2026-07-09 14:50:42 | INFO | Tool execution skipped due to missing confirmation.
+2026-07-09 14:50:42 | INFO | Retriever skipped (RAG not required).
+2026-07-09 14:50:42 | INFO | Running Response Agent...
+2026-07-09 14:50:42 | INFO | Response generated.

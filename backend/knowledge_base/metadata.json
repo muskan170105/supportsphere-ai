@@ -1,18 +1,34 @@
 [
     {
-        "id": "a6e03c17-31aa-415d-b785-2d41f3045736",
-        "filename": "MY CV.docx",
+        "id": "3494b809-4d99-46f3-9170-b02dda06e607",
+        "filename": "NovaCart_Order_Tracking.docx",
         "type": "DOCX",
-        "chunks": 3,
+        "chunks": 1,
         "status": "Indexed",
-        "uploaded_at": "07 Jul 2026 14:40"
+        "uploaded_at": "07 Jul 2026 15:42"
     },
     {
-        "id": "38c06fbb-6aae-41e0-a162-b1df04dea8f0",
-        "filename": "12402130 - infosys C++ certificate.pdf",
+        "id": "a0ed71df-3d90-4018-bc16-ede4b36f2cad",
+        "filename": "NovaCart_Password_Reset.docx",
+        "type": "DOCX",
+        "chunks": 1,
+        "status": "Indexed",
+        "uploaded_at": "07 Jul 2026 15:42"
+    },
+    {
+        "id": "29007de4-26af-41d9-bc88-8a0e2a6e756a",
+        "filename": "NovaCart_Refund_Policy.docx",
+        "type": "DOCX",
+        "chunks": 1,
+        "status": "Indexed",
+        "uploaded_at": "07 Jul 2026 15:42"
+    },
+    {
+        "id": "5cb1c098-e878-41fc-b1ed-d33125fffc65",
+        "filename": "NovaCart_Refund_Policy.pdf",
         "type": "PDF",
         "chunks": 1,
         "status": "Indexed",
-        "uploaded_at": "07 Jul 2026 14:40"
+        "uploaded_at": "07 Jul 2026 15:42"
     }
 ]

@@ -1,3 +1,5 @@
+import inspect
+
 from tools.tracking_tool import TrackingTool
 from tools.refund_tool import RefundTool
 from tools.payment_tool import PaymentTool
@@ -13,6 +15,9 @@ from core.execution_logger import execution_logger
 class ToolAgent:
     """
     Executes the business tool selected by the Planner Agent.
+
+    Only the parameters required by the selected
+    tool are forwarded.
     """
 
     def __init__(
@@ -42,27 +47,52 @@ class ToolAgent:
             ),
         }
 
-    def execute(self, planner_result):
-        """
-        Execute the selected business tool.
-        """
+    def execute(
+        self,
+        planner_result,
+    ):
 
         tool = self.tools.get(
             planner_result.tool
         )
 
         if tool is None:
+
             raise ToolNotFoundException(
                 planner_result.tool
             )
 
         parameters = planner_result.parameters or {}
 
-        result = tool.execute(**parameters)
+        # ==========================================
+        # Forward only parameters accepted
+        # by the selected tool.
+        # ==========================================
+
+        signature = inspect.signature(
+            tool.execute
+        )
+
+        filtered_parameters = {
+
+            name: value
+
+            for name, value in parameters.items()
+
+            if name in signature.parameters
+
+        }
+
+        result = tool.execute(
+            **filtered_parameters
+        )
 
         execution_logger.log(
+
             "Tool Agent",
-            f"Executed {planner_result.tool}"
+
+            f"Executed {planner_result.tool}",
+
         )
 
         return result

@@ -23,6 +23,15 @@ class EmbeddingService:
 
         )
 
+    def count_documents(self):
+
+        collection = self.vector_db._collection
+
+        print("=" * 60)
+        print("Total vectors:", collection.count())
+        print("=" * 60)
+
+
     # =====================================================
     # Index
     # =====================================================
@@ -55,6 +64,7 @@ class EmbeddingService:
             ids=ids,
 
         )
+        self.count_documents()
 
         print("=" * 60)
         print(
@@ -93,3 +103,6 @@ class EmbeddingService:
 embedding_service = (
     EmbeddingService()
 )
+
+
+
